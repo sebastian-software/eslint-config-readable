@@ -1,0 +1,19 @@
+#######################################################################################
+# Filenames Plugin
+#######################################################################################
+
+plugins:
+  - filenames
+
+rules:
+  # Don't allow dashes or underscores.
+  filenames/match-regex:
+    - error
+    - "^[a-zA-Z][a-zA-Z0-9.]+$"
+
+  # Keep in sync with exported symbol name.
+  filenames/match-exported: error
+
+  # Disable don't allow index.js files as this is used for exporting libs often times.
+  # Just be sure to not use them everywhere.
+  filenames/no-index: off

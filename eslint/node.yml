@@ -1,0 +1,19 @@
+plugins:
+  - node
+
+extends:
+  - plugin:node/recommended
+
+env:
+  node: true
+
+rules:
+  # Typically we use Babel/Buble in most projects right now
+  node/no-unsupported-features: off
+
+  # NPM installs in a flat hierarchy which prevent detecting request solved by dependencies
+  node/no-unpublished-require: off
+
+  # Disallow import declarations for files that don't exist.
+  # Somewhat a duplicate of "import" plugin
+  node/no-missing-import: off

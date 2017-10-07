@@ -1,0 +1,39 @@
+#######################################################################################
+# JSX Accessibility Plugin
+#######################################################################################
+
+plugins:
+  - jsx-a11y
+
+rules:
+  # Enforce all aria-* props are valid.
+  jsx-a11y/aria-props: error
+
+  # Enforce ARIA state and property values are valid.
+  jsx-a11y/aria-proptypes: error
+
+  # Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role.
+  jsx-a11y/aria-role: error
+
+  # Enforce that elements that do not support ARIA roles, states, and
+  # properties do not have those attributes.
+  jsx-a11y/aria-unsupported-elements: error
+
+  # Enforce that <img>, <area>, <input type="image">, and <object> JSX elements use the alt prop.
+  jsx-a11y/alt-text: error
+
+  # Enforce <img> alt prop does not contain the word "image", "picture", or "photo".
+  jsx-a11y/img-redundant-alt: error
+
+  # Enforce that <label> elements have the htmlFor prop.
+  jsx-a11y/label-has-for: error
+
+  # Enforce lang attribute has a valid value.
+  jsx-a11y/lang: error
+
+  # Enforce that the accessKey prop is not used on any element to avoid complications
+  # with keyboard commands used by a screenreader.
+  jsx-a11y/no-access-key: error
+
+  # Enforce that elements with ARIA roles must have all required attributes for that role.
+  jsx-a11y/role-has-required-aria-props: error

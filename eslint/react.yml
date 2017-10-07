@@ -1,0 +1,149 @@
+#######################################################################################
+# React Plugin
+#######################################################################################
+
+plugins:
+  - react
+
+extends:
+  - plugin:react/recommended
+
+rules:
+  #############################################################
+  # Compatibility with default ESLint behavior
+  #############################################################
+
+  # Prevent React to be incorrectly marked as unused
+  react/jsx-uses-react: error
+
+  # Prevent variables used in JSX to be incorrectly marked as unused
+  react/jsx-uses-vars: error
+
+
+  #############################################################
+  # Quality
+  #############################################################
+
+  # Disallow undeclared variables in JSX
+  react/jsx-no-undef: error
+
+  # Prevent missing displayName in a React component definition
+  react/display-name: error
+
+  # Enforce ES5 or ES6 class for returning value in render function
+  react/require-render-return: error
+
+  # Prevent missing React when using JSX
+  react/react-in-jsx-scope: error
+
+  # Good idea but currently warns on too many false issues with HOCs
+  react/no-unused-prop-types: off
+
+  # Prevent multiple component definition per file
+  react/no-multi-comp:
+    - error
+    - ignoreStateless: true
+
+  # Enforce ES5 or ES6 class for React Components
+  react/prefer-es6-class: error
+
+  # Enforce stateless React Components to be written as a pure function
+  react/prefer-stateless-function: error
+
+  # Prevent missing parentheses around multilines JSX (fixable)
+  react/jsx-wrap-multilines: error
+
+  # Prevent usage of dangerous JSX properties
+  react/no-danger: error
+
+  # Prevent direct mutation of this.state
+  react/no-direct-mutation-state: error
+
+  # Enforce style prop value being an object
+  react/style-prop-object: error
+
+  # Prevent duplicate props in JSX
+  react/jsx-no-duplicate-props:
+    - error
+    - ignoreCase: true
+
+  # Don't pollute DOM
+  react/no-unknown-property: error
+
+
+  #############################################################
+  # Performance
+  #############################################################
+
+  # Prevent usage of setState in componentDidMount
+  react/no-did-mount-set-state: error
+
+  # Prevent usage of setState in componentDidUpdate
+  react/no-did-update-set-state: error
+
+  # Updating the state during the componentWillUpdate step can lead to indeterminate component state.
+  react/no-will-update-set-state: error
+
+  # Prevent usage of .bind() and arrow functions in JSX props
+  # Excellent tip on how the alternative would look like:
+  # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#protips
+  react/jsx-no-bind: warn
+
+
+  #############################################################
+  # Style
+  #############################################################
+
+  # Validate closing bracket location in JSX (fixable)
+  react/jsx-closing-bracket-location:
+    - error
+    - line-aligned
+
+  # Enforce PascalCase for user-defined JSX components
+  react/jsx-pascal-case:
+    - error
+    - allowAllCaps: true
+      ignore: []
+
+  # Restrict file extensions that may contain JSX
+  react/jsx-filename-extension:
+    - error
+    - extensions: [ ".js" ]
+
+  # Prevent extra closing tags for components without children (fixable)
+  react/self-closing-comp: error
+
+  # Enforce component methods order
+  react/sort-comp: error
+
+  # Enforce event handler naming conventions in JSX
+  # Disabled feels too strict.
+  react/jsx-handler-names: off
+
+  # Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
+  react/jsx-curly-spacing: error
+
+  # Validate JSX indentation
+  # Currently buggy with third option: https://github.com/yannickcr/eslint-plugin-react/issues/1083
+  react/jsx-indent:
+    - error
+    - 2
+
+  # Validate props indentation in JSX
+  react/jsx-indent-props:
+    - error
+    - 2
+
+
+  #############################################################
+  # Deprecated features
+  #############################################################
+
+  # Prevent usage of deprecated methods
+  react/no-deprecated: error
+
+  # Prevent usage of isMounted
+  react/no-is-mounted: error
+
+  # Unsafe + Bad performance + Deprecated
+  react/no-find-dom-node: error

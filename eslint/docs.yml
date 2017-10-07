@@ -1,0 +1,37 @@
+plugins:
+  - jsdoc
+
+rules:
+  # Ensures that parameter names in JSDoc match those in the function declaration.
+  jsdoc/check-param-names: warn
+
+  # Reports invalid block tag names (referring to JSDoc 3 Block Tags).
+  jsdoc/check-tag-names: warn
+
+  # Ensures that case of native types is the same as in this list:
+  # boolean, number, string, Object, Array, Date, RegExp
+  jsdoc/check-types: warn
+
+  # Enforces a consistent padding of the block description.
+  jsdoc/newline-after-description: warn
+
+  # Requires that block description and tag description are written in complete sentences
+  jsdoc/require-description-complete-sentence: warn
+
+  # Requires a hyphen before the @param description.
+  jsdoc/require-hyphen-before-param-description: off
+
+  # Requires that all function parameters are documented.
+  jsdoc/require-param: warn
+
+  # Requires that @param tag has description value.
+  jsdoc/require-param-description: warn
+
+  # Requires that @param tag has type value. - Prefer Flowtype
+  jsdoc/require-param-type: off
+
+  # Requires that @returns tag has description value.
+  jsdoc/require-returns-description: warn
+
+  # Requires that @returns tag has type value. - Prefer Flowtype
+  jsdoc/require-returns-type: off

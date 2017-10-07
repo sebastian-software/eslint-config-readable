@@ -1,0 +1,536 @@
+#######################################################################################
+# Code Quality
+#######################################################################################
+
+plugins:
+  - extra-rules
+
+rules:
+  # Enforces return statements in callbacks of array’s methods like `filter`
+  array-callback-return: error
+
+  # Being explicit about the behavior. Prefer 'let' in more narrow local usage.
+  block-scoped-var: error
+
+  # Enforce minimal code complexity. The default of 20 is far to high for maintainable code.
+  complexity:
+    - error
+    - 10
+
+  # Verify calls of super() in constructors
+  constructor-super: error
+
+  # Require return statements to either always or never specify values
+  consistent-return: error
+
+  # Require Default Case in Switch Statements
+  default-case: error
+
+  # Require Dot Notation. No need for using array-like accessor in most cases.
+  dot-notation:
+    - error
+    - allowKeywords: true
+
+  # Smart option allows simple equal for null-comparison which is good
+  eqeqeq:
+    - error
+    - smart
+
+  # Trailing newlines in non-empty files are a common UNIX idiom.
+  eol-last: error
+
+  # Warn on any outcommented code. Typically this is temporarly and should
+  # be cleaned up over time.
+  # https://github.com/bahmutov/eslint-rules
+  extra-rules/no-commented-out-code: warn
+
+  # Disallow spacing between function identifiers and their invocations.
+  # Otherwise might be visually confusing.
+  func-call-spacing: error
+
+  # Enforce spacing around the * in generator functions
+  # The star is no operator but a modifier of the function
+  # Good: function *generator() {}
+  generator-star-spacing:
+    - error
+    - before
+
+  # Was mainly relevant while people extended Object.prototype.xxx
+  guard-for-in: off
+
+  # Enforce a maximum depth that blocks can be nested
+  max-depth:
+    - error
+    - maximum: 3
+
+  # Enforce a maximum line length
+  max-len:
+    - error
+    - code: 110
+      comments: 140
+      ignoreUrls: true
+      tabWidth: 2
+
+  # Enforce a maximum file length where we only count actual lines of code
+  max-lines:
+    - warn
+    - skipBlankLines: true
+      skipComments: true
+      max: 250
+
+  # Enforce a maximum depth that callbacks can be nested
+  max-nested-callbacks:
+    - error
+    - 3
+
+  # Enforce a maximum number of parameters in function definitions
+  max-params:
+    - error
+    - 2
+
+  # Enforce a maximum number of statements allowed in function blocks
+  max-statements:
+    - error
+    - 25
+    - ignoreTopLevelFunctions: true
+
+  # Enforce a maximum number of statements allowed per line
+  max-statements-per-line:
+    - error
+    - max: 2
+
+  # Require constructor names to begin with a capital letter and being executed with `new` keyword
+  new-cap:
+    - error
+    - capIsNew: false
+
+  # Require parentheses when invoking a constructor with no arguments
+  new-parens: error
+
+  # Disallow Array constructors
+  no-array-constructor: error
+
+  # Don't let alerts slip through production systems
+  no-alert: error
+
+  # Disallow bitwise operators
+  # Generally prevents errors + rule can be disabled locally when required
+  no-bitwise: error
+
+  # Disallow Shadowing of Variables Inside of catch
+  # Only relevant in IE8 and earlier. Would not allow to use the same error variable in
+  # the same scope. Still no good practice for understanding the code.
+  no-catch-shadow: error
+
+  # Disabled: Don't see why this is regarded as problematic
+  no-continue: off
+
+  # Disallow control characters in regular expressions
+  no-control-regex: error
+
+  # Disallow Use of caller/callee which make several code optimizations impossible
+  no-caller: error
+
+  # Don't let console output slip through were not explicitely stated otherwise
+  no-console: warn
+
+  # Disallow modifying variables of class declarations
+  no-class-assign: error
+
+  # Disallow modifying variables that are declared using const
+  no-const-assign: error
+
+  # Disallow arrow functions where they could be confused with comparisons
+  no-confusing-arrow: error
+
+  # Disallow duplicate imports
+  no-duplicate-imports: error
+
+  # Disallow deleting variables
+  no-delete-var: error
+
+  # Disallow duplicate arguments in function definitions
+  no-dupe-args: error
+
+  # Disallow duplicate keys in object literals
+  no-dupe-keys: error
+
+  # Disallow a duplicate case label
+  no-duplicate-case: error
+
+  # Disallow duplicate name in class members
+  no-dupe-class-members: error
+
+  # Hard to read code must be forbidden
+  no-div-regex: error
+
+  # Disabled: Disallow unnecessary parentheses.
+  # If it helps for readability, that's fine. Too much structure is still being removed by compression.
+  no-extra-parens: off
+
+  # Disallow empty character classes in regular expressions
+  no-empty-character-class: error
+
+  # Disallow reassigning exceptions in catch clauses
+  no-ex-assign: error
+
+  # Disallow unnecessary function binding
+  no-extra-bind: error
+
+  # Disallow Unnecessary Labels
+  no-extra-label: error
+
+  # Prefer what ever the developer thinks make code more readable/understandable
+  no-else-return: off
+
+  # Disallow empty functions
+  no-empty-function: error
+
+  # Disallow empty destructuring patterns
+  no-empty-pattern: error
+
+  # Disabled: Disallow Null Comparisons. Stupid check. See also rule `eqeqeq`
+  no-eq-null: off
+
+  # Disallow eval()
+  no-eval: error
+
+  # Disallow Extending of Native Objects
+  no-extend-native: error
+
+  # Disallow Case Statement Fallthrough. Disable for rare exceptions.
+  no-fallthrough: error
+
+  # Disallow Floating Decimals. These look like errors.
+  no-floating-decimal: error
+
+  # Disallow reassigning function declarations
+  no-func-assign: error
+
+  # Disallow the type conversion with shorter notations.
+  no-implicit-coercion:
+    - error
+    - boolean: true
+      string: true
+      number: true
+
+  # Disallow variable and function declarations in the global scope
+  # Does not make sense with ES6 modules
+  no-implicit-globals: off
+
+  # Disallow Implied eval()
+  no-implied-eval: error
+
+  # Disallow this keywords outside of classes or class-like objects.
+  # Generally a good idea but does not yet work with class properties etc.
+  no-invalid-this: off
+
+  # Disallow invalid regular expression strings in RegExp constructors
+  no-invalid-regexp: error
+
+  # Irrelevant extension. The __iterator__ property was a SpiderMonkey extension to JavaScript that could
+  # be used to create custom iterators
+  no-iterator: error
+
+  # Disallow Labels That Are Variables Names
+  no-label-var: error
+
+  # Disallow Labeled Statements
+  no-labels:
+    - error
+    - allowLoop: false
+      allowSwitch: false
+
+  # Disallow Unnecessary Nested Blocks
+  no-lone-blocks: error
+
+  # Disallow if statements as the only statement in else blocks
+  # Disabled as it might be used to improve code for human logic / readability
+  no-lonely-if: off
+
+  # Disallow Functions in Loops
+  no-loop-func: error
+
+  # Disallow Magic Numbers
+  # ‘Magic numbers’ are numbers that occur multiple time in code without an explicit meaning.
+  no-magic-numbers:
+    - error
+    - ignoreArrayIndexes: true
+      ignore: [ -1, 0, 1, 2, 10, 16, 100, 1000 ]
+
+  # Disallow mixes of different operators
+  no-mixed-operators:
+    - error
+    - groups:
+      - ['&', '|', '^', '~', '<<', '>>', '>>>']
+      - ['==', '!=', '===', '!==', '>', '>=', '<', '<=']
+      - ['&&', '||']
+      - ['in', 'instanceof']
+      allowSamePrecedence: false
+
+  # Disallow Multiline Strings. Bad practice as it was an undocumented feature of JavaScript.
+  # Use template literals instead.
+  no-multi-str: error
+
+  # Disallow negating the left operand in in expressions
+  no-negated-in-lhs: error
+
+  # Disallow negated conditions
+  # Can help, but also can make code more complex/unnaturally structured
+  no-negated-condition: off
+
+  # Disallow nested ternary expressions. Good for readability.
+  no-nested-ternary: error
+
+  # Disallow Object constructor
+  no-new-object: error
+
+  # Disallow Symbol constructor
+  no-new-symbol: error
+
+  # Disallow Reassignment of Native Objects e.g. `Object`
+  no-native-reassign: error
+
+  # Disallow Function Constructor. Comparable to `eval()` light.
+  no-new-func: error
+
+  # Disallow Primitive Wrapper Instances. Keep it simple.
+  no-new-wrappers: error
+
+  # Disallow calling global object properties as functions
+  no-obj-calls: error
+
+  # Disallow octal literals. Typically typos.
+  no-octal: error
+
+  # Disallow octal escape sequences in string literals. Better use real unicode sequences.
+  no-octal-escape: error
+
+  # Disallow the unary operators ++ and --
+  # Seems to be a new trend to omit this e.g. in Swift and other modern languages
+  # But is pretty convenient in classic for-loops... therefor we allow it there
+  no-plusplus:
+    - error
+    - allowForLoopAfterthoughts: true
+
+  # Disallow use of Object.prototypes builtins directly
+  no-prototype-builtins: error
+
+  # Disable direct init: new require("app-header")
+  # Also does not work with new `import`/`import()` syntax.
+  no-new-require: error
+
+  # Disallow string concatenation when using __dirname and __filename
+  # Use path.join/resolve instead
+  no-path-concat: error
+
+  # Prevent side effects to arguments objects, but also makes code sometimes more complexer
+  # when you have some logic in place to deal with different argument sets.
+  # Still with ES6 default arguments and destructing params it's easier solvable today than in the past.
+  no-param-reassign: error
+
+  # Disallow process.env
+  # The process.env object in Node.js is used to store deployment/configuration parameters.
+  # Littering it through out a project could lead to maintenance issues as it’s another kind of
+  # global dependency.
+  # We'd like to do this for compile/deployment time optimizations. Just keep in mind to
+  # not use it for everything configuration related.
+  no-process-env: off
+
+  # Disallow Use of __proto__
+  no-proto: error
+
+  # Disallow certain object properties
+  # http://eslint.org/docs/rules/no-restricted-properties
+  no-restricted-properties:
+    - error
+    - object: 'arguments'
+      property: callee
+      message: arguments.callee is deprecated
+    - property: __defineGetter__
+      message: 'Please use Object.defineProperty instead.'
+    - property: __defineSetter__
+      message: 'Please use Object.defineProperty instead.'
+    - object: Math
+      property: pow
+      message: 'Use the exponentiation operator (**) instead.'
+
+  # Disallow multiple spaces in regular expression literals
+  no-regex-spaces: error
+
+  # Disallow usage of `with`, `debugger` and `label` statements
+  no-restricted-syntax:
+    - error
+    - WithStatement
+    - DebuggerStatement
+    - LabeledStatement
+
+  # Disallow variable redeclaration
+  # Disabled. Therefor they are variables, right?
+  no-redeclare: off
+
+  # Disallow Assignment in return Statement
+  # Readability wins
+  no-return-assign: error
+
+  # Disallow Script URLs
+  no-script-url: error
+
+  # Disallow Self Assignment
+  no-self-assign: error
+
+  # Disallow Self Compare
+  no-self-compare: error
+
+  # Disallow Use of the Comma Operator
+  # Omit quite magic syntax... Readability for all wins
+  no-sequences: error
+
+  # Disallow variable declarations from shadowing variables declared in the outer scope
+  # For better maintainability
+  no-shadow:
+    - error
+    - allow: [ "resolve", "reject", "done" ]
+
+  # Disallow Shadowing of Restricted Names
+  no-shadow-restricted-names: error
+
+  # Disallow spacing between function identifiers and their applications
+  no-spaced-func: error
+
+  # Disallow sparse arrays
+  # It’s recommended to avoid using them unless you are certain that they are useful in your code.
+  no-sparse-arrays: error
+
+  # Disallow use of this/super before calling super() in constructors.
+  no-this-before-super: error
+
+  # Good idea to keep some more error info:
+  # "The fundamental benefit of Error objects is that they automatically keep track of where they were built and originated."
+  no-throw-literal: error
+
+  # Disabled: Disallow ternary operators
+  no-ternary: off
+
+  # Disallow template literal placeholder syntax in regular strings
+  no-template-curly-in-string: error
+
+  # Disallow whitespace before properties
+  no-whitespace-before-property: error
+
+  # Disallow Initializing to undefined
+  # Stupid idea which needs to be prevented
+  no-undef-init: error
+
+  # Disallow Use of undefined Variable
+  # Nowadays in modern JS which is transpiled `undefined` is a valid keyword. No need to prevent usage.
+  no-undefined: off
+
+  # Disallow confusing multiline expressions
+  no-unexpected-multiline: error
+
+  # Disallow unreachable code after return, throw, continue, and break statements. Keeping code clean.
+  no-unreachable: error
+
+  # Disallow unused Variables
+  no-unused-vars:
+    - error
+    - varsIgnorePattern: '^_'
+      ignoreRestSiblings: true
+      args: none
+
+  # Disallow Early Use
+  no-use-before-define:
+    - error
+    - functions: false
+      classes: false
+
+  # Disallow Undeclared Variables
+  no-undef: error
+
+  # Disallow Unused Labels
+  no-unused-labels: error
+
+  # Disallow unmodified conditions of loops. Possible error candidate.
+  no-unmodified-loop-condition: error
+
+  # Disallow ternary operators when simpler alternatives exist
+  # Getting people to senior level...
+  no-unneeded-ternary: error
+
+  # Disallow Unused Expressions. Keep things clean.
+  no-unused-expressions:
+    - error
+    - allowTernary: false
+      allowShortCircuit: true
+
+  # Disallow unnecessary .call() and .apply().
+  no-useless-call: error
+
+  # Disallow unnecessary concatenation of strings
+  no-useless-concat: error
+
+  # Disallow unnecessary computed property keys on objects
+  no-useless-computed-key: error
+
+  # ES2015 provides a default class constructor if one is not specified. As such, it is
+  # unnecessary to provide an empty constructor or one that simply delegates into its parent class.
+  no-useless-constructor: error
+
+  # Disallow renaming import, export, and destructured assignments to the same name
+  no-useless-rename:
+    - error
+    - ignoreDestructuring: false
+      ignoreImport: false
+      ignoreExport: false
+
+  # Disallow use of the void operator.
+  no-void: error
+
+  # Warn on warning comments. These are technical dept which should be removed.
+  no-warning-comments: warn
+
+  # Disallow with statements
+  # The with statement is potentially problematic because it adds members of an object to the
+  # current scope, making it impossible to tell what a variable inside the block actually refers to.
+  no-with: error
+
+  # Mainly for securing code compatibility
+  radix:
+    - error
+    - always
+
+  # Disallow generator functions that do not have yield
+  require-yield: error
+
+  # Disallow a space before function parenthesis
+  # Parens belong to the function... a spacing could break easy grasping of the code
+  space-before-function-paren:
+    - error
+    - never
+
+  # Require or disallow spacing between template tags and their literals
+  # Logical connections should not be broken by formatting.
+  template-tag-spacing:
+    - error
+    - never
+
+  # Enforce comparing typeof expressions against valid strings
+  valid-typeof: error
+
+  # Prefer inside for readability
+  wrap-iife:
+    - error
+    - inside
+
+  # Require Regex Literals to be Wrapped
+  # I like the improved readability when using parens
+  wrap-regex: error
+
+  # Disallow the Unicode Byte Order Mark
+  unicode-bom:
+    - error
+    - never
+
+  # Require calls to isNaN() when checking for NaN
+  use-isnan: error

@@ -1,0 +1,102 @@
+#######################################################################################
+# Basics
+#######################################################################################
+
+parser: babel-eslint
+
+parserOptions:
+  ecmaVersion: 2017
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+
+env:
+  browser: true
+  es6: true
+  jest: true
+  worker: true
+  serviceworker: true
+
+plugins:
+  - babel
+  - no-use-extend-native
+
+extends:
+  - eslint:recommended
+
+rules:
+  # Enforce consistent indentation
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+      VariableDeclarator: 1
+      outerIIFEBody: 0
+      MemberExpression: 1
+      FunctionExpression:
+        body: 1
+        parameters: 1
+      CallExpression:
+        arguments: 1
+
+  # Disallow trailing whitespace at the end of lines
+  no-trailing-spaces: error
+
+  # Useless formatting with high maintenance
+  no-multi-spaces: error
+
+  # This rule requires or disallows blank newlines around directive prologues.
+  lines-around-directive: error
+
+  # Enforce consistent linebreak style
+  linebreak-style:
+    - error
+    - unix
+
+  # Enforce the consistent use of quotes
+  # We go with double quotes as these work well with HTML-inspired JSX, too
+  quotes:
+    - error
+    - double
+    - avoidEscape: true
+      allowTemplateLiterals: true
+
+  # Disallow semicolons which is mostly safe and cleans up visual clutter
+  semi:
+    - error
+    - never
+
+  # Enforce strict mode globally which also happens during bundling
+  strict:
+    - error
+    - global
+
+  # Require Variable Declarations to be at the top of their scope
+  # Does not improve maintainability in my opinion... instead makes
+  # unused variables harder to track over time
+  vars-on-top: off
+
+  # Require or disallow Yoda Conditions
+  # Actually interesting that this ugliness should be even something to consider.
+  yoda:
+    - error
+    - never
+
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
+  brace-style:
+    - off
+
+  # Prevent old style extensions of native objects
+  no-use-extend-native/no-use-extend-native:
+    - error
+
+  # Babel Plugin settings for compat with Babel parser
+  babel/new-cap:
+    - error
+    - capIsNew: false
+
+  babel/object-curly-spacing:
+    - error
+    - always

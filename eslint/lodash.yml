@@ -1,0 +1,23 @@
+plugins:
+  - lodash
+  - you-dont-need-lodash-underscore
+
+extends:
+  - plugin:lodash/recommended
+  - plugin:you-dont-need-lodash-underscore/all-warn
+
+rules:
+  # Most of the normal ES2015 methods are okay to use nowadays
+  lodash/prefer-lodash-method: off
+
+  # Not every type check has to use a lodash method
+  lodash/prefer-lodash-typecheck: off
+
+  # Utility method should not be a requirement
+  lodash/prefer-constant: off
+
+  # Warns on "global" imports, but also detects cherry imports (which are the future)
+  lodash/import-scope: off
+
+  # This is not really a problem, but often times premature optimization
+  lodash/prefer-noop: off

@@ -1,0 +1,15 @@
+#######################################################################################
+# Flowtype Plugin
+#######################################################################################
+
+plugins:
+  - flowtype
+  - flowtype-errors
+
+extends:
+  - plugin:flowtype/recommended
+
+rules:
+  # Improve support for usage of Flowtype
+  flowtype-errors/show-errors:
+    - error

@@ -1,0 +1,164 @@
+#################################################################
+# Stylistic
+#################################################################
+
+rules:
+  # Require parens in arrow function arguments.
+  # Otherwise might be visually confusing.
+  arrow-parens:
+    - error
+    - always
+
+  # Require braces in arrow function body as needed
+  # Disabled as in real development the "as-needed" value often times
+  # means reformatting of code when adding additional code.
+  arrow-body-style:
+    - off
+    - as-needed
+
+  # Reduce visual clutter though non required commas.
+  # Code is more often read than written. Optimize for that.
+  comma-dangle:
+    - error
+    - never
+
+  # Require Following Curly Brace Conventions
+  curly:
+    - off
+
+  # Require Camelcase
+  camelcase: error
+
+  # Requires a comma after and on the same line as an array element
+  comma-style:
+    - error
+    - last
+
+  # It is desirable to ensure that whichever alias the team agrees upon is used
+  # consistently throughout the application.
+  consistent-this:
+    - error
+    - self
+
+  # The dot in a member expression should be on the same line as the property portion.
+  dot-location:
+    - error
+    - property
+
+  # Useful for debugging in older browsers, but a lot of work to manually add everywhere
+  func-names:
+    - error
+    - as-needed
+
+  # Enforce the consistent use of either double quotes in JSX attributes
+  jsx-quotes:
+    - error
+    - prefer-double
+
+  # Enforce the consistent use of function declarations
+  func-style:
+    - error
+    - declaration
+    - allowArrowFunctions: true
+
+  # Enforce minimum and maximum identifier lengths
+  id-length:
+    - error
+    - min: 4
+      max: 40
+      # 'i' + 'l' = typical looping constructs
+      # 'fs' = built-in fs module
+      exceptions: [
+        "i", "l",
+        "id", "fs", "url", "uri", "map", "env", "err",
+        "key", "val", "obj",
+        "pos", "row", "col",
+        "min", "max",
+        "CWD", "pkg"
+      ]
+      properties: never
+
+  # Require empty lines around comments
+  lines-around-comment:
+    - error
+    - beforeBlockComment: true
+      afterBlockComment: false
+      beforeLineComment: true
+      afterLineComment: false
+      allowBlockStart: true
+      allowBlockEnd: false
+      allowObjectStart: true
+      allowObjectEnd: false
+      allowArrayStart: true
+      allowArrayEnd: false
+
+  # It good to have newlines when declaring a block of variables, but not for just one
+  # where we directly have some actionable stuff afterwards.
+  newline-after-var:
+    - off
+
+  # Improves readability, but does not work everywhere... therefor we keep it off
+  # and let the individual developer decide.
+  newline-before-return: off
+  newline-per-chained-call: off
+
+  # Disallow inline comments after code
+  # Leads to complexer to overlook code
+  no-inline-comments: error
+
+  # Disallow multiple empty lines
+  no-multiple-empty-lines:
+    - error
+    - max: 4
+      maxEOF: 1
+      maxBOF: 0
+
+  # Enforce placing object properties on separate lines. Generally a good idea on a lot of cases.
+  # Unfortunately does not make code with (destructured) named parameters very readable.
+  object-property-newline:
+    - error
+    - allowMultiplePropertiesPerLine: true
+
+  # Require Object Literal Shorthand Syntax
+  object-shorthand:
+    - warn
+    - always
+    - ignoreConstructors: true
+      avoidQuotes: true
+
+  # Disallow dangling underscores in identifiers
+  no-underscore-dangle: off
+
+  # Enforce variables to be declared separately in functions
+  one-var:
+    - error
+    - initialized: never
+
+  # Disallow newlines around variable declarations
+  one-var-declaration-per-line:
+    - error
+    - initializations
+
+  # Disallow assignment operator shorthand where possible
+  operator-assignment: error
+
+  # Enforce consistent linebreak style for operators. Place the operator at the end of the line.
+  operator-linebreak:
+    - error
+    - after
+
+  # Disallow padding within blocks.
+  # Use Alman style (which is allowed) where more overview is needed.
+  padded-blocks:
+    - error
+    - never
+
+  # Requires quotes around all object literal property names if any name strictly requires quotes
+  # That's a neat little setting for keeping code readable
+  quote-props:
+    - error
+    - consistent-as-needed
+
+  # Variables and Imports should be sorted in semantic groups not by name
+  sort-imports: off
+  sort-vars: off

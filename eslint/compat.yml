@@ -1,0 +1,10 @@
+#######################################################################################
+# Compat Plugin
+#######################################################################################
+
+plugins:
+  - compat
+
+rules:
+  # Lint browser compatibility of API used based on configured browserslist.
+  compat/compat: warn

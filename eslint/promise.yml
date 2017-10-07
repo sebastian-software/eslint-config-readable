@@ -1,0 +1,26 @@
+#######################################################################################
+# Promise Plugin
+#######################################################################################
+
+plugins:
+  - promise
+
+rules:
+  # Enforce consistent param names when creating new promises.
+  promise/param-names: error
+
+  # Return inside each then to create readable and reusable Promise chains.
+  promise/always-return: warn
+
+  # Enforces the use of catch on un-returned promises.
+  promise/catch-or-return: warn
+
+  # Await is part of ES2017... transpiling to generators is still not as efficient as needed.
+  # It's okay to keep using Promises, but it's also okay to start using async/await.
+  promise/prefer-await-to-then: off
+
+  # Disabled as we assume it being polyfilled for us
+  promise/no-native: off
+
+  # Currently fails with hard eslint parse errors in some use cases (v3)
+  # promise/no-return-wrap: error
