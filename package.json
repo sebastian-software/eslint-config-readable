@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0"
+  }
 }
