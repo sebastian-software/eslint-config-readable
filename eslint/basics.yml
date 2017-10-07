@@ -26,20 +26,6 @@ extends:
   - eslint:recommended
 
 rules:
-  # Enforce consistent indentation
-  indent:
-    - error
-    - 2
-    - SwitchCase: 1
-      VariableDeclarator: 1
-      outerIIFEBody: 0
-      MemberExpression: 1
-      FunctionExpression:
-        body: 1
-        parameters: 1
-      CallExpression:
-        arguments: 1
-
   # Disallow trailing whitespace at the end of lines
   no-trailing-spaces: error
 
@@ -54,19 +40,6 @@ rules:
     - error
     - unix
 
-  # Enforce the consistent use of quotes
-  # We go with double quotes as these work well with HTML-inspired JSX, too
-  quotes:
-    - error
-    - double
-    - avoidEscape: true
-      allowTemplateLiterals: true
-
-  # Disallow semicolons which is mostly safe and cleans up visual clutter
-  semi:
-    - error
-    - never
-
   # Enforce strict mode globally which also happens during bundling
   strict:
     - error
@@ -74,7 +47,8 @@ rules:
 
   # Require Variable Declarations to be at the top of their scope
   # Does not improve maintainability in my opinion... instead makes
-  # unused variables harder to track over time
+  # unused variables harder to track over time. Also a fully new situation
+  # with the widely used const/let offerings of modern JS.
   vars-on-top: off
 
   # Require or disallow Yoda Conditions
@@ -82,11 +56,6 @@ rules:
   yoda:
     - error
     - never
-
-  # Tolerating both: 1tbs and allman - it's not really that relevant as long
-  # as overall indenting is correct
-  brace-style:
-    - off
 
   # Prevent old style extensions of native objects
   no-use-extend-native/no-use-extend-native:

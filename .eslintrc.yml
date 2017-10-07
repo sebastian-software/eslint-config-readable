@@ -5,6 +5,7 @@ extends:
   - ./eslint/docs.yml
   - ./eslint/filenames.yml
   - ./eslint/flowtype.yml
+  - ./eslint/formatting.yml
   - ./eslint/import.yml
   - ./eslint/jsx-a11y.yml
   - ./eslint/lodash.yml

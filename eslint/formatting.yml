@@ -1,0 +1,33 @@
+rules:
+  # Enforce consistent indentation
+  indent:
+    - error
+    - 2
+    - SwitchCase: 1
+      VariableDeclarator: 1
+      outerIIFEBody: 0
+      MemberExpression: 1
+      FunctionExpression:
+        body: 1
+        parameters: 1
+      CallExpression:
+        arguments: 1
+
+  # Enforce the consistent use of quotes
+  # We go with double quotes as these work well with HTML-inspired JSX, too
+  quotes:
+    - error
+    - double
+    - avoidEscape: true
+      allowTemplateLiterals: true
+
+  # Disallow semicolons which is mostly safe and cleans up visual clutter
+  semi:
+    - error
+    - never
+
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
+  brace-style:
+    - off
+
