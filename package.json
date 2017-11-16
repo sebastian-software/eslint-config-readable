@@ -14,7 +14,10 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
   "dependencies": {
-    "babel-eslint": "^8.0.1",
-    "eslint": "^4.8.0"
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.11.0"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^2.13.0"
   }
 }
