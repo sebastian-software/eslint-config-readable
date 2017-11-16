@@ -21,37 +21,10 @@ Configuration for maintainable which requires excellent readability for Web Proj
 
 ## Features
 
-- Automatic detection of Git tracked files for simple to use approach in all projects.
-
-### JavaScript
-
 - Includes a sophisticated ESLint configuration. Optimized for readability.
 - Contains linting support for ES2017, React, JSX, Flow, Lodash, Accessiblity, etc.
 - Includes configuration for [prettier](https://github.com/prettier/prettier) in conjunction with ESLints fix mode for automatic sane code configuration.
-- Offers gulp tasks `lint:js`, `fix:js` and `pretty:js` for linting, fixing and auto formatting of JavaScript code.
 
-### CSS
-
-- Includes configuration for StyleLint
-- Offers gulp tasks `lint:css` and `fix:css` for linting and auto formatting of CSS code.
-
-
-
-
-## Usage
-
-You can copy the relevant files into your own project like `.editorconfig`.
-
-For ESLint/StyleLint there is a more sophisticated approach: The configuration can be included like shown below:
-
-### Usage
-
-You can extend your custom ESLint configuration
-
-```yaml
-extends:
-  readable
-```
 
 
 ## Formatting Rules
@@ -71,6 +44,20 @@ extends:
 - No magic numbers. Use variables to describe intention.
 
 
+## Usage
+
+You can copy the relevant files into your own project like `.editorconfig`.
+
+For ESLint/StyleLint there is a more sophisticated approach: The configuration can be included like shown below:
+
+### Usage
+
+You can extend your custom ESLint configuration
+
+```yaml
+extends:
+  readable
+```
 
 ## Technology Stack
 
