@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "release": "git push && release-it --github.release --npm.publish --non-interactive",
+    "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
+    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
     "test": "eslint index.js"
   },
   "author": {
@@ -40,6 +43,7 @@
     "flow-bin": "^0.59.0"
   },
   "devDependencies": {
-    "npm-check-updates": "^2.13.0"
+    "npm-check-updates": "^2.13.0",
+    "release-it": "^4.4.1"
   }
 }
