@@ -1,15 +1,12 @@
-# ESLint Config Readable<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Dependencies][deps-img]][deps]
+# ESLint Config Readable<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Dependencies][deps-img]][deps] [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
 [sponsor]: https://www.sebastian-software.de
-[deps]: https://david-dm.org/sebastian-software/readable-code
-[deps-img]: https://david-dm.org/sebastian-software/readable-code.svg
-[npm]: https://www.npmjs.com/package/readable-code
-[npm-downloads-img]: https://img.shields.io/npm/dm/readable-code.svg
-[npm-version-img]: https://img.shields.io/npm/v/readable-code.svg
-
-
-Configuration for maintainable which requires excellent readability for Web Projects.
+[deps]: https://david-dm.org/sebastian-software/eslint-config-readable
+[deps-img]: https://david-dm.org/sebastian-software/eslint-config-readable.svg
+[npm]: https://www.npmjs.com/package/eslint-config-readable
+[npm-downloads-img]: https://img.shields.io/npm/dm/eslint-config-readable.svg
+[npm-version-img]: https://img.shields.io/npm/v/eslint-config-readable.svg
 
 
 ## Goals
