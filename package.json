@@ -23,6 +23,7 @@
   "dependencies": {
     "babel-eslint": "^8.0.2",
     "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.8.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-compat": "^2.1.0",
     "eslint-plugin-css-modules": "^2.7.5",
@@ -41,10 +42,11 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.3.1",
     "flow-bin": "^0.59.0",
-    "prettier": "^1.8.2"
+    "prettier": "^1.8.2",
+    "prettier-eslint-cli": "^4.4.0"
   },
   "devDependencies": {
     "npm-check-updates": "^2.13.0",
-    "release-it": "^4.4.1"
+    "release-it": "^5.0.0"
   }
 }
