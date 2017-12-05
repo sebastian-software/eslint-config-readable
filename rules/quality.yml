@@ -36,9 +36,6 @@ rules:
     - error
     - smart
 
-  # Trailing newlines in non-empty files are a common UNIX idiom.
-  eol-last: error
-
   # Warn on any outcommented code. Typically this is temporarly and should
   # be cleaned up over time.
   # https://github.com/bahmutov/eslint-rules
@@ -75,12 +72,12 @@ rules:
   # Enforce a maximum number of parameters in function definitions
   max-params:
     - error
-    - 2
+    - 3
 
   # Enforce a maximum number of statements allowed in function blocks
   max-statements:
     - error
-    - 25
+    - 30
     - ignoreTopLevelFunctions: true
 
   # Enforce a maximum number of statements allowed per line
@@ -384,9 +381,6 @@ rules:
   # Disallow Shadowing of Restricted Names
   no-shadow-restricted-names: error
 
-  # Disallow spacing between function identifiers and their applications
-  no-spaced-func: error
-
   # Disallow sparse arrays
   # It’s recommended to avoid using them unless you are certain that they are useful in your code.
   no-sparse-arrays: error
@@ -488,12 +482,6 @@ rules:
 
   # Disallow generator functions that do not have yield
   require-yield: error
-
-  # Disallow a space before function parenthesis
-  # Parens belong to the function... a spacing could break easy grasping of the code
-  space-before-function-paren:
-    - error
-    - never
 
   # Require or disallow spacing between template tags and their literals
   # Logical connections should not be broken by formatting.

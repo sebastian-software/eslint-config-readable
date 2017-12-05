@@ -50,9 +50,6 @@ rules:
   # Enforce stateless React Components to be written as a pure function
   react/prefer-stateless-function: error
 
-  # Prevent missing parentheses around multilines JSX (fixable)
-  react/jsx-wrap-multilines: error
-
   # Prevent usage of dangerous JSX properties
   react/no-danger: error
 
@@ -94,11 +91,6 @@ rules:
   # Style
   #############################################################
 
-  # Validate closing bracket location in JSX (fixable)
-  react/jsx-closing-bracket-location:
-    - error
-    - line-aligned
-
   # Enforce PascalCase for user-defined JSX components
   react/jsx-pascal-case:
     - error
@@ -119,9 +111,6 @@ rules:
   # Enforce event handler naming conventions in JSX
   # Disabled feels too strict.
   react/jsx-handler-names: off
-
-  # Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
-  react/jsx-curly-spacing: error
 
 
   #############################################################

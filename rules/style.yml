@@ -3,12 +3,6 @@
 #################################################################
 
 rules:
-  # Require parens in arrow function arguments.
-  # Otherwise might be visually confusing.
-  arrow-parens:
-    - error
-    - always
-
   # Require braces in arrow function body as needed
   # Disabled as in real development the "as-needed" value often times
   # means reformatting of code when adding additional code.
@@ -28,11 +22,6 @@ rules:
 
   # Require Camelcase
   camelcase: error
-
-  # Requires a comma after and on the same line as an array element
-  comma-style:
-    - error
-    - last
 
   # It is desirable to ensure that whichever alias the team agrees upon is used
   # consistently throughout the application.
@@ -117,11 +106,6 @@ rules:
 
   # Disallow assignment operator shorthand where possible
   operator-assignment: error
-
-  # Enforce consistent linebreak style for operators. Place the operator at the end of the line.
-  operator-linebreak:
-    - error
-    - after
 
   # Disallow padding within blocks.
   # If you need this probably think of using Allman style (which is allowed) where more overview is needed.

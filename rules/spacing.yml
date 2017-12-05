@@ -5,11 +5,6 @@ rules:
     - always
     - objectsInArrays: false
 
-  # Enforce consistent spacing inside braces
-  object-curly-spacing:
-    - error
-    - always
-
   spaced-comment:
     - error
     - always

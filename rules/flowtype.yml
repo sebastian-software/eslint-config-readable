@@ -11,5 +11,11 @@ extends:
 
 rules:
   # Improve support for usage of Flowtype
-  flowtype-errors/show-errors:
-    - warn
+  flowtype-errors/show-errors: warn
+
+  # Disable formatting rules as solved by prettier
+  flowtype/generic-spacing: off
+  flowtype/space-after-type-colon: off
+  flowtype/space-before-generic-bracket: off
+  flowtype/space-before-type-colon: off
+  flowtype/union-intersection-spacing: off

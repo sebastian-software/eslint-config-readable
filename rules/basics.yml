@@ -67,7 +67,3 @@ rules:
   babel/new-cap:
     - error
     - capIsNew: false
-
-  babel/object-curly-spacing:
-    - error
-    - always
