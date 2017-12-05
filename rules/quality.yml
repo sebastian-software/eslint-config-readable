@@ -44,17 +44,6 @@ rules:
   # https://github.com/bahmutov/eslint-rules
   extra-rules/no-commented-out-code: warn
 
-  # Disallow spacing between function identifiers and their invocations.
-  # Otherwise might be visually confusing.
-  func-call-spacing: error
-
-  # Enforce spacing around the * in generator functions
-  # The star is no operator but a modifier of the function
-  # Good: function *generator() {}
-  generator-star-spacing:
-    - error
-    - before
-
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in: off
 

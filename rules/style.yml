@@ -45,11 +45,6 @@ rules:
     - error
     - as-needed
 
-  # Enforce the consistent use of either double quotes in JSX attributes
-  jsx-quotes:
-    - error
-    - prefer-double
-
   # Enforce the consistent use of function declarations
   func-style:
     - error
@@ -129,16 +124,10 @@ rules:
     - after
 
   # Disallow padding within blocks.
-  # Use Alman style (which is allowed) where more overview is needed.
+  # If you need this probably think of using Allman style (which is allowed) where more overview is needed.
   padded-blocks:
     - error
     - never
-
-  # Requires quotes around all object literal property names if any name strictly requires quotes
-  # That's a neat little setting for keeping code readable
-  quote-props:
-    - error
-    - consistent-as-needed
 
   # Variables and Imports should be sorted in semantic groups not by name
   sort-imports: off

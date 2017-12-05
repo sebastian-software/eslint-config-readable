@@ -5,45 +5,10 @@ rules:
     - always
     - objectsInArrays: false
 
-  # Require space before/after arrow function’s arrow
-  arrow-spacing: error
-
-  # Enforce spaces inside of single line blocks
-  block-spacing:
-    - error
-    - always
-
-  # Enforce consistent spacing before and after keywords
-  keyword-spacing: error
-
   # Enforce consistent spacing inside braces
   object-curly-spacing:
     - error
     - always
-
-  # Enforce spacing between rest and spread operators and their expressions
-  rest-spread-spacing:
-    - error
-    - never
-
-  # Require Space Before Blocks. Keeping things readable.
-  space-before-blocks:
-    - error
-    - always
-
-  # Disallow spaces inside of parentheses
-  space-in-parens:
-    - error
-    - never
-
-  # Require spacing around infix operators
-  space-infix-ops: error
-
-  # Require spaces before/after unary operators
-  space-unary-ops:
-    - error
-    - words: true
-      nonwords: false
 
   spaced-comment:
     - error
