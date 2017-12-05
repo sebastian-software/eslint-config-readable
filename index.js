@@ -17,7 +17,6 @@ module.exports = {
     "./rules/quality.yml",
     "./rules/react.yml",
     "./rules/spacing.yml",
-    "./rules/style.yml",
-    "./rules/security.yml"
+    "./rules/style.yml"
   ]
 }

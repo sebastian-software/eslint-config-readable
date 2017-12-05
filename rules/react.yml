@@ -81,10 +81,11 @@ rules:
   # Updating the state during the componentWillUpdate step can lead to indeterminate component state.
   react/no-will-update-set-state: error
 
+  # Typically a premature optimization which is quite unhandy during MVP feature development.
   # Prevent usage of .bind() and arrow functions in JSX props
   # Excellent tip on how the alternative would look like:
   # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#protips
-  react/jsx-no-bind: warn
+  react/jsx-no-bind: off
 
 
   #############################################################

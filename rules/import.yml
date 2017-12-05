@@ -38,4 +38,4 @@ rules:
   import/no-amd: error
 
   # Report potentially ambiguous parse goal
-  import/unambiguous: error
+  import/unambiguous: off
