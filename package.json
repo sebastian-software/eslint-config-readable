@@ -1,14 +1,12 @@
 {
   "name": "eslint-config-readable",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Configuration for ESLint to achieve readable source code.",
   "main": "index.js",
   "scripts": {
     "release": "git push && release-it --github.release --npm.publish --non-interactive",
-    "release:minor":
-      "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major":
-      "git push && release-it --github.release --npm.publish --non-interactive --increment major",
+    "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
+    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
     "test": "eslint index.js",
     "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
@@ -17,7 +15,14 @@
     "email": "s.werner@sebastian-software.de",
     "url": "https://www.sebastian-software.de"
   },
-  "files": [".editorconfig", ".prettierrc.yml", ".eslintrc.yml", "index.js", "node.js", "rules/"],
+  "files": [
+    ".editorconfig",
+    ".prettierrc.yml",
+    ".eslintrc.yml",
+    "index.js",
+    "node.js",
+    "rules/"
+  ],
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
   "dependencies": {
