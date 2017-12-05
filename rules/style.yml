@@ -10,6 +10,10 @@ rules:
     - off
     - as-needed
 
+  arrow-parens:
+    - error
+    - always
+
   # Reduce visual clutter though non required commas.
   # Code is more often read than written. Optimize for that.
   comma-dangle:
