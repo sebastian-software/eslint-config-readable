@@ -1,5 +1,5 @@
 plugins:
   - prettier
 
-rules
-  - prettier/prettier: warn
+rules:
+  prettier/prettier: warn
