@@ -26,11 +26,13 @@ extends:
   - eslint:recommended
 
 rules:
-  # Disallow trailing whitespace at the end of lines
-  no-trailing-spaces: error
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
+  brace-style:
+    - off
 
-  # Useless formatting with high maintenance
-  no-multi-spaces: error
+  # Disallow trailing whitespace at the end of lines
+  no-trailing-spaces: warn
 
   # This rule requires or disallows blank newlines around directive prologues.
   lines-around-directive: error

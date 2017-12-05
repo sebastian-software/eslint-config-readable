@@ -123,17 +123,6 @@ rules:
   # Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
   react/jsx-curly-spacing: error
 
-  # Validate JSX indentation
-  # Currently buggy with third option: https://github.com/yannickcr/eslint-plugin-react/issues/1083
-  react/jsx-indent:
-    - error
-    - 2
-
-  # Validate props indentation in JSX
-  react/jsx-indent-props:
-    - error
-    - 2
-
 
   #############################################################
   # Deprecated features

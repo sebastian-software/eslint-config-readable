@@ -13,24 +13,6 @@ rules:
     - error
     - always
 
-  # Enforces spacing around commas
-  comma-spacing:
-    - error
-    - before: false
-      after: true
-
-  # Disallow spaces inside of computed properties
-  computed-property-spacing:
-    - error
-    - never
-
-  # Enforce consistent spacing between keys and values in object literal properties
-  key-spacing:
-    - error
-    - beforeColon: false
-      afterColon: true
-      mode: strict
-
   # Enforce consistent spacing before and after keywords
   keyword-spacing: error
 
@@ -43,13 +25,6 @@ rules:
   rest-spread-spacing:
     - error
     - never
-
-  # Enforce spacing before and after semicolons
-  # Note: We only use semicolons in rare cases like for-loops
-  semi-spacing:
-    - error
-    - after: true
-      before: false
 
   # Require Space Before Blocks. Keeping things readable.
   space-before-blocks:

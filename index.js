@@ -8,7 +8,6 @@ module.exports = {
     "./rules/docs.yml",
     "./rules/filenames.yml",
     "./rules/flowtype.yml",
-    "./rules/formatting.yml",
     "./rules/import.yml",
     "./rules/jsx-a11y.yml",
     "./rules/lodash.yml",

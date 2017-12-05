@@ -7,7 +7,8 @@
     "release": "git push && release-it --github.release --npm.publish --non-interactive",
     "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
     "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
-    "test": "eslint index.js"
+    "test": "eslint index.js",
+    "prettier-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
   },
   "author": {
     "name": "Sebastian Software",

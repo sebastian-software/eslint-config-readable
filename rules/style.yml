@@ -40,11 +40,6 @@ rules:
     - error
     - self
 
-  # The dot in a member expression should be on the same line as the property portion.
-  dot-location:
-    - error
-    - property
-
   # Useful for debugging in older browsers, but a lot of work to manually add everywhere
   func-names:
     - error
@@ -77,20 +72,6 @@ rules:
         "CWD", "pkg"
       ]
       properties: never
-
-  # Require empty lines around comments
-  lines-around-comment:
-    - error
-    - beforeBlockComment: true
-      afterBlockComment: false
-      beforeLineComment: true
-      afterLineComment: false
-      allowBlockStart: true
-      allowBlockEnd: false
-      allowObjectStart: true
-      allowObjectEnd: false
-      allowArrayStart: true
-      allowArrayEnd: false
 
   # It good to have newlines when declaring a block of variables, but not for just one
   # where we directly have some actionable stuff afterwards.

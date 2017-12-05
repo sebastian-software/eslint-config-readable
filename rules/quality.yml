@@ -415,9 +415,6 @@ rules:
   # Disallow template literal placeholder syntax in regular strings
   no-template-curly-in-string: error
 
-  # Disallow whitespace before properties
-  no-whitespace-before-property: error
-
   # Disallow Initializing to undefined
   # Stupid idea which needs to be prevented
   no-undef-init: error

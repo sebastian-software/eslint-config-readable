@@ -12,4 +12,4 @@ extends:
 rules:
   # Improve support for usage of Flowtype
   flowtype-errors/show-errors:
-    - error
+    - warn
