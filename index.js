@@ -1,6 +1,7 @@
 /* eslint-disable import/unambiguous, import/no-commonjs */
 module.exports = {
   extends: [
+    "./rules/prettier.yml",
     "./rules/basics.yml",
     "./rules/compat.yml",
     "./rules/cssmodules.yml",
