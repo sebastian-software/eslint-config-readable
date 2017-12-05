@@ -16,6 +16,9 @@
     "url": "https://www.sebastian-software.de"
   },
   "files": [
+    ".editorconfig",
+    ".prettierrc.yml",
+    ".eslintrc.yml",
     "index.js",
     "rules/"
   ],
