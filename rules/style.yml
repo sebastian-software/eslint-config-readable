@@ -36,6 +36,11 @@ rules:
     - error
     - never
 
+  # Requires a comma after and on the same line as an array element
+  comma-style:
+    - error
+    - last
+
   # Require Following Curly Brace Conventions
   curly:
     - off
@@ -53,6 +58,11 @@ rules:
   func-names:
     - error
     - as-needed
+
+  # We do not allow too many params, therefor we also do not need multilines.
+  function-paren-newline:
+    - error
+    - never
 
   # Enforce the consistent use of function declarations
   func-style:
@@ -77,6 +87,16 @@ rules:
       ]
       properties: never
 
+  # Enforce empty line between all class members
+  lines-between-class-members:
+    - error
+    - exceptAfterSingleLine: true
+
+  # Enforce cleaner comments
+  multiline-comment-style:
+    - error
+    - starred-block
+
   # It good to have newlines when declaring a block of variables, but not for just one
   # where we directly have some actionable stuff afterwards.
   newline-after-var:
@@ -85,7 +105,11 @@ rules:
   # Improves readability, but does not work everywhere... therefor we keep it off
   # and let the individual developer decide.
   newline-before-return: off
-  newline-per-chained-call: off
+
+  # Visual more verbose formatting is good for readability
+  newline-per-chained-call:
+    - error
+    - ignoreChainWithDepth: 2
 
   # Disallow inline comments after code
   # Leads to more challenging to scan code.
@@ -97,6 +121,14 @@ rules:
     - max: 4
       maxEOF: 1
       maxBOF: 0
+
+  # Disallow dangling underscores in identifiers
+  no-underscore-dangle: off
+
+  # Enforce consistent spacing inside braces
+  object-curly-spacing:
+    - error
+    - always
 
   # Enforce placing object properties on separate lines. Generally a good idea on a lot of cases.
   # Unfortunately does not make code with (destructured) named parameters very readable.
@@ -111,9 +143,6 @@ rules:
     - ignoreConstructors: true
       avoidQuotes: true
 
-  # Disallow dangling underscores in identifiers
-  no-underscore-dangle: off
-
   # Enforce variables to be declared separately in functions
   one-var:
     - error
@@ -127,9 +156,20 @@ rules:
   # Disallow assignment operator shorthand where possible
   operator-assignment: error
 
+  # Enforce consistent linebreak style for operators. Place the operator at the end of the line.
+  operator-linebreak:
+    - error
+    - after
+
   # Disallow padding within blocks.
   # If you need this probably think of using Allman style (which is allowed) where more overview is needed.
   padded-blocks:
+    - error
+    - never
+
+  # Disallow a space before function parenthesis
+  # Parens belong to the function... a spacing could break easy grasping of the code
+  space-before-function-paren:
     - error
     - never
 
@@ -162,3 +202,11 @@ rules:
   # Enforce event handler naming conventions in JSX
   # Disabled feels too strict.
   react/jsx-handler-names: off
+
+  # Validate closing bracket location in JSX (fixable)
+  react/jsx-closing-bracket-location:
+    - error
+    - line-aligned
+
+  # Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
+  react/jsx-curly-spacing: error

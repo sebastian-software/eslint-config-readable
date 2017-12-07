@@ -5,7 +5,7 @@
 parser: babel-eslint
 
 parserOptions:
-  ecmaVersion: 2017
+  ecmaVersion: 2018
   ecmaFeatures:
     impliedStrict: true
     experimentalObjectRestSpread: true
@@ -35,6 +35,9 @@ rules:
   linebreak-style:
     - error
     - unix
+
+  # Trailing newlines in non-empty files are a common UNIX idiom.
+  eol-last: error
 
   # Enforce strict mode globally which also happens during bundling
   strict:

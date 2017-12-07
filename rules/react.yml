@@ -65,6 +65,8 @@ rules:
   # Don't pollute DOM
   react/no-unknown-property: error
 
+  # Prevent missing parentheses around multilines JSX (fixable)
+  react/jsx-wrap-multilines: error
 
   #############################################################
   # Performance
