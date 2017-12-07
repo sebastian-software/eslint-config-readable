@@ -13,11 +13,9 @@ parserOptions:
   sourceType: module
 
 env:
+  shared-node-browser: true
   browser: true
   es6: true
-  jest: true
-  worker: true
-  serviceworker: true
 
 plugins:
   - babel

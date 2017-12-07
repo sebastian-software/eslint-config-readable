@@ -90,6 +90,7 @@ rules:
   # Enforce empty line between all class members
   lines-between-class-members:
     - error
+    - always
     - exceptAfterSingleLine: true
 
   # Enforce cleaner comments
@@ -164,6 +165,11 @@ rules:
   # Disallow padding within blocks.
   # If you need this probably think of using Allman style (which is allowed) where more overview is needed.
   padded-blocks:
+    - error
+    - never
+
+  # Disable semicolons
+  semi:
     - error
     - never
 
