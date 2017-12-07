@@ -501,10 +501,5 @@ rules:
   # I like the improved readability when using parens
   wrap-regex: error
 
-  # Disallow the Unicode Byte Order Mark
-  unicode-bom:
-    - error
-    - never
-
   # Require calls to isNaN() when checking for NaN
   use-isnan: error

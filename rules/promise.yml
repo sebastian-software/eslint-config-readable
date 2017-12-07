@@ -21,6 +21,3 @@ rules:
 
   # Disabled as we assume it being polyfilled for us
   promise/no-native: off
-
-  # Currently fails with hard eslint parse errors in some use cases (v3)
-  # promise/no-return-wrap: error

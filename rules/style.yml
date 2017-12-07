@@ -3,6 +3,17 @@
 #################################################################
 
 rules:
+  # Enforce spaces inside of brackets
+  array-bracket-spacing:
+    - error
+    - always
+    - objectsInArrays: false
+
+  spaced-comment:
+    - error
+    - always
+    - exceptions: [ "*", "=", "-" ]
+
   # Require braces in arrow function body as needed
   # Disabled as in real development the "as-needed" value often times
   # means reformatting of code when adding additional code.
@@ -13,6 +24,11 @@ rules:
   arrow-parens:
     - error
     - always
+
+  # Tolerating both: 1tbs and allman - it's not really that relevant as long
+  # as overall indenting is correct
+  brace-style:
+    - off
 
   # Reduce visual clutter though non required commas.
   # Code is more often read than written. Optimize for that.
@@ -72,12 +88,12 @@ rules:
   newline-per-chained-call: off
 
   # Disallow inline comments after code
-  # Leads to complexer to overlook code
-  no-inline-comments: error
+  # Leads to more challenging to scan code.
+  no-inline-comments: warn
 
   # Disallow multiple empty lines
   no-multiple-empty-lines:
-    - error
+    - warn
     - max: 4
       maxEOF: 1
       maxBOF: 0
@@ -120,3 +136,29 @@ rules:
   # Variables and Imports should be sorted in semantic groups not by name
   sort-imports: off
   sort-vars: off
+
+
+  #############################################################
+  # JSX / REACT
+  #############################################################
+
+  # Enforce PascalCase for user-defined JSX components
+  react/jsx-pascal-case:
+    - error
+    - allowAllCaps: true
+      ignore: []
+
+  # Restrict file extensions that may contain JSX
+  react/jsx-filename-extension:
+    - error
+    - extensions: [ ".js", ".ts" ]
+
+  # Prevent extra closing tags for components without children (fixable)
+  react/self-closing-comp: error
+
+  # Enforce component methods order
+  react/sort-comp: error
+
+  # Enforce event handler naming conventions in JSX
+  # Disabled feels too strict.
+  react/jsx-handler-names: off

@@ -2,6 +2,7 @@
 module.exports = {
   extends: [
     "./index",
+    "./rules/node.yml",
     "./rules/security.yml"
   ]
 }

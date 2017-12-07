@@ -38,6 +38,3 @@ rules:
   # Report AMD require and define calls.
   # We go full-in with ES module syntax
   import/no-amd: error
-
-  # Report potentially ambiguous parse goal
-  import/unambiguous: off

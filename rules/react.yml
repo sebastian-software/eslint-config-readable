@@ -40,15 +40,13 @@ rules:
   react/no-unused-prop-types: off
 
   # Prevent multiple component definition per file
-  react/no-multi-comp:
-    - error
-    - ignoreStateless: true
+  react/no-multi-comp: error
 
   # Enforce ES5 or ES6 class for React Components
   react/prefer-es6-class: error
 
   # Enforce stateless React Components to be written as a pure function
-  react/prefer-stateless-function: error
+  react/prefer-stateless-function: warn
 
   # Prevent usage of dangerous JSX properties
   react/no-danger: error
@@ -86,32 +84,6 @@ rules:
   # Excellent tip on how the alternative would look like:
   # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#protips
   react/jsx-no-bind: off
-
-
-  #############################################################
-  # Style
-  #############################################################
-
-  # Enforce PascalCase for user-defined JSX components
-  react/jsx-pascal-case:
-    - error
-    - allowAllCaps: true
-      ignore: []
-
-  # Restrict file extensions that may contain JSX
-  react/jsx-filename-extension:
-    - error
-    - extensions: [ ".js" ]
-
-  # Prevent extra closing tags for components without children (fixable)
-  react/self-closing-comp: error
-
-  # Enforce component methods order
-  react/sort-comp: error
-
-  # Enforce event handler naming conventions in JSX
-  # Disabled feels too strict.
-  react/jsx-handler-names: off
 
 
   #############################################################

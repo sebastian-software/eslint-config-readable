@@ -7,6 +7,7 @@ parser: babel-eslint
 parserOptions:
   ecmaVersion: 2017
   ecmaFeatures:
+    impliedStrict: true
     experimentalObjectRestSpread: true
     jsx: true
   sourceType: module
@@ -26,16 +27,9 @@ extends:
   - eslint:recommended
 
 rules:
-  # Tolerating both: 1tbs and allman - it's not really that relevant as long
-  # as overall indenting is correct
-  brace-style:
-    - off
-
   # Disallow trailing whitespace at the end of lines
-  no-trailing-spaces: warn
-
-  # This rule requires or disallows blank newlines around directive prologues.
-  lines-around-directive: error
+  no-trailing-spaces:
+    - warn
 
   # Enforce consistent linebreak style
   linebreak-style:
@@ -51,7 +45,13 @@ rules:
   # Does not improve maintainability in my opinion... instead makes
   # unused variables harder to track over time. Also a fully new situation
   # with the widely used const/let offerings of modern JS.
-  vars-on-top: off
+  vars-on-top:
+    - off
+
+  # Disallow the Unicode Byte Order Mark
+  unicode-bom:
+    - error
+    - never
 
   # Require or disallow Yoda Conditions
   # Actually interesting that this ugliness should be even something to consider.
