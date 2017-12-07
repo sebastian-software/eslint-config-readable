@@ -17,6 +17,8 @@ settings:
     - .js
     - .jsx
     - .mjs
+    - .ts
+    - .tsx
 
 rules:
   # Loader syntax is useful when loading files with alternative approaches e.g.
