@@ -93,11 +93,6 @@ rules:
     - always
     - exceptAfterSingleLine: true
 
-  # Enforce cleaner comments
-  multiline-comment-style:
-    - error
-    - starred-block
-
   # It good to have newlines when declaring a block of variables, but not for just one
   # where we directly have some actionable stuff afterwards.
   newline-after-var:
