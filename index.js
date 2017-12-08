@@ -19,6 +19,10 @@ module.exports = {
   "overrides": [
     {
       "files": [
+        // Dot files
+        ".*.js",
+
+        // Cosmiconfig files
         "*.config.*.js"
       ],
       "rules": {
@@ -27,7 +31,10 @@ module.exports = {
     },
     {
       "files": [
-        "__tests__/**/*.js",
+        // Jest Tests
+        "__tests__/*.js",
+
+        // Alternative using a naming convention
         "*.spec.js",
         "*.test.js"
       ],

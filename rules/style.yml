@@ -60,9 +60,11 @@ rules:
     - as-needed
 
   # We do not allow too many params, therefor we also do not need multilines.
+  # Still this produces some ugly warnings on perfect okayish code e.g.
+  # when passing complex objects and deciding that it looks better when being
+  # wrapped into new lines.
   function-paren-newline:
-    - error
-    - never
+    - off
 
   # Enforce the consistent use of function declarations
   func-style:
