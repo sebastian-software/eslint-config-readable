@@ -48,6 +48,6 @@
     "flow-bin": "^0.60.1"
   },
   "devDependencies": {
-    "release-it": "^5.0.0"
+    "release-it": "^5.1.0"
   }
 }
