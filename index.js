@@ -19,7 +19,7 @@ module.exports = {
   "overrides": [
     {
       "files": [
-        "**/*.config.**.js"
+        "*.config.*.js"
       ],
       "rules": {
         "import/no-commonjs": "off"
@@ -27,8 +27,9 @@ module.exports = {
     },
     {
       "files": [
-        "**/__tests__/**/*.js?(x)",
-        "**/?(*.)(spec|test).js?(x)"
+        "__tests__/**/*.js",
+        "*.spec.js",
+        "*.test.js"
       ],
       "env": {
         jest: true,
