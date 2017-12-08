@@ -14,5 +14,25 @@ module.exports = {
     "./rules/quality.yml",
     "./rules/react.yml",
     "./rules/style.yml"
+  ],
+
+  "overrides": [
+    {
+      "files": [
+        "**/*.config.**.js"
+      ],
+      "rules": {
+        "import/no-commonjs": "off"
+      }
+    },
+    {
+      "files": [
+        "**/__tests__/**/*.js?(x)",
+        "**/?(*.)(spec|test).js?(x)"
+      ],
+      "env": {
+        jest: true
+      }
+    }
   ]
 }
