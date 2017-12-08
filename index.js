@@ -31,7 +31,8 @@ module.exports = {
         "**/?(*.)(spec|test).js?(x)"
       ],
       "env": {
-        jest: true
+        jest: true,
+        mocha: true
       }
     }
   ]
