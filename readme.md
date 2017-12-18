@@ -1,13 +1,17 @@
-# ESLint Config Readable<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Dependencies][deps-img]][deps] [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+# ESLint Config Readable<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-img]][npm] [![Dependencies][deps-img]][deps]
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
 [sponsor]: https://www.sebastian-software.de
 [deps]: https://david-dm.org/sebastian-software/eslint-config-readable
-[deps-img]: https://david-dm.org/sebastian-software/eslint-config-readable.svg
+[deps-img]: https://david-dm.org/sebastian-software/eslint-config-readable/status.svg
 [npm]: https://www.npmjs.com/package/eslint-config-readable
-[npm-downloads-img]: https://img.shields.io/npm/dm/eslint-config-readable.svg
-[npm-version-img]: https://img.shields.io/npm/v/eslint-config-readable.svg
+[npm-img]: https://badge.fury.io/js/eslint-config-readable.svg
 
+The aim of this configuration is to achieve optimal readable code for a large number of projects. In many cases, the easing of the code's looseness in comparison to its compactness is an advantage for this. The idea is that code is much more read than written. Clear and structured code is therefore valuable for each additional author.
+
+There is also the matching [Stylelint Configuration](https://www.npmjs.com/package/stylelint-config-readable) available.
+
+> "If you want your code to be easy to write, make it easy to read." — Robert C. Martin
 
 ## Goals
 
@@ -20,8 +24,6 @@
 
 - Includes a sophisticated ESLint configuration. Optimized for readability.
 - Contains linting support for ES2017, React, JSX, Flow, Lodash, Accessiblity, etc.
-- Includes configuration for [prettier](https://github.com/prettier/prettier) in conjunction with ESLints fix mode for automatic sane code configuration.
-
 
 
 ## Formatting Rules
@@ -43,26 +45,37 @@
 
 ## Usage
 
-You can copy the relevant files into your own project like `.editorconfig`.
+Installation with `npm`:
 
-For ESLint/StyleLint there is a more sophisticated approach: The configuration can be included like shown below:
+```bash
+npm install --save-dev eslint-config-readable eslint
+```
 
-### Usage
+Installation with `yarn`:
 
-You can extend your custom ESLint configuration
+```bash
+yarn add --dev eslint-config-readable eslint
+```
+
+Add the preset to your eslint config e.g. `.eslintrc.yml`
 
 ```yaml
 extends:
-  readable
+  - readable
 ```
 
-## Technology Stack
+You can place your overrides and additions into the `rules` section as well:
 
-### ESLint ([Project](https://github.com/eslint/eslint) | [Homepage](http://eslint.org/))
+```yaml
+extends:
+  - readable
+rules:
+  indent:
+    - error
+    - 4
+```
 
-Effectively a successor of both [JSHint](http://jshint.com/) and [JSCS](http://jscs.info/). Is configured to use the [Babel Parser](https://github.com/babel/babel-eslint) for full ES2017+ support.
-
-Plugins:
+## Activated Plugins
 
 - `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
@@ -78,35 +91,10 @@ Plugins:
 - `security`: Checks for security issues in e.g. RegExps.
 - `you-dont-need-lodash-underscore`: Showcases where ES5 would be a better solution than Lodash.
 
-### Prettier ([Project](https://github.com/prettier/prettier))
-
-Auto formatting engine for JavaScript (+ ES2017, JSX, and Flow) which intelligently supports limiting line length and other more advanced features.
-
-
-
-## Other Prominent Styles
-
-- [ESLint Recommended]()
-  - Focussed on potential errors
-- [Airbnb]()
-- [Standard](https://github.com/standard/eslint-config-standard)
-  - Offers [a tool](https://standardjs.com) for easier setup
-- [XO](https://github.com/sindresorhus/eslint-config-xo)
-  - Offers [a tool](https://github.com/sindresorhus/xo) for easier handling and prettier output
-  - Plugins: Unicorn, Import, Ava
-  - Optional React Addition
-- [Idiomatic](https://github.com/jamespamplin/eslint-config-idiomatic)
-  - Uses multiple var declarations in one statement.
-- [Create React App](https://github.com/facebookincubator/create-react-app/blob/master/packages/eslint-config-react-app)
-  - Focussed on potential errors
-  - Plugins: Flowtype, JSX-A11Y, Import, React
-
-> See also: [NPM Usage Comparison](https://npmcharts.com/compare/eslint-config-airbnb,eslint-config-standard,eslint-config-xo,eslint-config-google?minimal=true) between Airbnb, XO, Google and Standard.
-
 
 
 ## Copyright
 
-<img src="https://raw.githubusercontent.com/sebastian-software/readable-code/master/assets/sebastiansoftware.png" alt="Sebastian Software GmbH Logo" width="250" height="200"/>
+<img src="https://github.com/sebastian-software/sebastian-software-brand/raw/master/sebastiansoftware-en.svg?sanitize=true" alt="Sebastian Software GmbH Logo" width="250" />
 
-Copyright 2015-2017<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
+Copyright 2015-2018<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)

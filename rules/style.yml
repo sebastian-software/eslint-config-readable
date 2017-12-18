@@ -89,6 +89,11 @@ rules:
       ]
       properties: never
 
+  # Use two spaces for indention
+  indent:
+    - error
+    - 2
+
   # Enforce empty line between all class members
   lines-between-class-members:
     - error
