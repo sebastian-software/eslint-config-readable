@@ -13,9 +13,9 @@ The aim of this configuration is to achieve optimal readable code for a large nu
 
 The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting (which could be fully solved with new tools like [Prettier](https://prettier.io/)) but also about avoiding errors and mentoring developers. As you will see the chosen infrastructure with ESLint as a backbone offers so much more.
 
-With support for React, Flowtype, JSX, JSDoc, CSS Modules and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
+With support for React, Flowtype, JSX, JSDoc and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
 
-Special features include, for example, the built-in control of CSS modules and a check of the compatibility of browser features using the Can-I-Use database.
+Special features include, for example, the built-in control of CSS modules, JSX-based accessibility checks and a usage of the Can-I-Use database to warn for non-widely supported browser features.
 
 There is also the matching [Stylelint Configuration](https://www.npmjs.com/package/stylelint-config-readable) available.
 
