@@ -9,16 +9,14 @@
 
 The aim of this configuration is to achieve optimal readable code for a large number of projects. In many cases, the easing of the code's looseness in comparison to its compactness is an advantage for this. The idea is that code is much more read than written. Clear and structured code is therefore valuable for each additional author.
 
+The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting but also about avoiding errors. The chosen infrastructure with ESLint offers so much more.
+
+With support for React, JSX and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
+
 There is also the matching [Stylelint Configuration](https://www.npmjs.com/package/stylelint-config-readable) available.
 
 > "If you want your code to be easy to write, make it easy to read." — Robert C. Martin
 
-## Goals
-
-- Don't try to prematurely optimize your code; keep it readable and understandable.
-- All code in any code-base should look like a single person typed it, even when many people are contributing to it.
-
-> "If you want your code to be easy to write, make it easy to read." -- Robert C. Martin
 
 
 ## Rules TLDR
