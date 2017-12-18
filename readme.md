@@ -15,7 +15,7 @@ The code should appear uniform no matter how many authors are involved. But of c
 
 With support for React, Flowtype, JSX, JSDoc and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
 
-Special features include, for example, the built-in control of CSS modules, JSX-based accessibility checks and a usage of the Can-I-Use database to warn for non-widely supported browser features.
+Special features include, for example, the built-in control of CSS modules, JSX-based accessibility checks and a usage of the Can-I-Use database to warn on non-widely supported browser features.
 
 There is also the matching [Stylelint Configuration](https://www.npmjs.com/package/stylelint-config-readable) available.
 

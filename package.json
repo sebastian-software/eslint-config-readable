@@ -17,7 +17,6 @@
   },
   "files": [
     ".editorconfig",
-    ".eslintrc.yml",
     "index.js",
     "node.js",
     "rules/"
