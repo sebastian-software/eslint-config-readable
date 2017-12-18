@@ -7,15 +7,17 @@
 [npm]: https://www.npmjs.com/package/eslint-config-readable
 [npm-img]: https://badge.fury.io/js/eslint-config-readable.svg
 
+> "If you want your code to be easy to write, make it easy to read." — Robert C. Martin
+
 The aim of this configuration is to achieve optimal readable code for a large number of projects. In many cases, the easing of the code's looseness in comparison to its compactness is an advantage for this. The idea is that code is much more read than written. Clear and structured code is therefore valuable for each additional author.
 
-The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting but also about avoiding errors. The chosen infrastructure with ESLint offers so much more.
+The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting (which could be fully solved with new tools like [Prettier](https://prettier.io/)) but also about avoiding errors and mentoring developers. As you will see the chosen infrastructure with ESLint as a backbone offers so much more.
 
-With support for React, JSX and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
+With support for React, Flowtype, JSX, JSDoc, CSS Modules and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
+
+Special features include, for example, the built-in control of CSS modules and a check of the compatibility of browser features using the Can-I-Use database.
 
 There is also the matching [Stylelint Configuration](https://www.npmjs.com/package/stylelint-config-readable) available.
-
-> "If you want your code to be easy to write, make it easy to read." — Robert C. Martin
 
 
 
@@ -56,7 +58,7 @@ extends:
   - readable
 ```
 
-You can place your overrides and additions into the `rules` section as well:
+Though this configuration is meant to be usable without any further configuration you are naturally free to extend it and place overrides into your configuration e.g. by extending the `rules` section:
 
 ```yaml
 extends:
@@ -67,7 +69,7 @@ rules:
     - 4
 ```
 
-### Alternative NodeJS Config
+## NodeJS Config
 
 There is an extended NodeJS focused configuration. Simply change your configuration to:
 
