@@ -2,6 +2,9 @@
 # Basics
 #######################################################################################
 
+extends:
+  - eslint:recommended
+
 parser: babel-eslint
 
 parserOptions:
@@ -13,8 +16,9 @@ parserOptions:
   sourceType: module
 
 env:
+  browser: false
+  node: false
   shared-node-browser: true
-  browser: true
   es6: true
   commonjs: true
 
@@ -22,8 +26,12 @@ plugins:
   - babel
   - no-use-extend-native
 
-extends:
-  - eslint:recommended
+globals:
+  # Allow access to process.env also in Non-Node environments. We want to
+  # protect the user in frontend code to access other NodeJS objects - therefor
+  # we do not enable Node-Env globally, but `process.env` should not throw with
+  # the `no-undef` rule.
+  process: true
 
 rules:
   # Disallow trailing whitespace at the end of lines

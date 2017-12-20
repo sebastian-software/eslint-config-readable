@@ -17,6 +17,7 @@
   },
   "files": [
     ".editorconfig",
+    "browser.js",
     "index.js",
     "node.js",
     "rules/"

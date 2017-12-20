@@ -32,7 +32,7 @@ module.exports = {
     {
       "files": [
         // Jest Tests
-        "__tests__/*.js",
+        "**/__tests__/*.js",
 
         // Alternative using a naming convention
         "*.spec.js",
