@@ -37,14 +37,10 @@ There is also the matching [Stylelint Configuration](https://www.npmjs.com/packa
 - No magic numbers. Use variables to describe intention.
 
 
-## Matching Prettier Config
-
-As this configuration contains a few formatting rules these are the prettier settings you might want to use in combination with this:
 
 
 
-
-## Usage
+## Installation
 
 Installation with `npm`:
 
@@ -76,7 +72,63 @@ rules:
     - 4
 ```
 
-## NodeJS Config
+
+
+## Matching Prettier Config
+
+As this configuration contains a few formatting rules these are the prettier settings you might want to use in combination with this:
+
+```yaml
+# We generally allow wider code lines, but for auto formatting this
+# is quite a good rule to produce readable code.
+printWidth: 80
+
+# Use two spaces for tabs
+tabWidth: 2
+
+# Unify with convention used in JSX, HTML and CSS to use double quotes
+singleQuote: false
+
+# Don't use semicolons where they are not required
+semi: false
+
+# Don't do stupid trailing commas reducing noise ratio.
+trailingComma: none
+
+# More space is better for readability
+bracketSpacing: true
+
+# Put the > of a multi-line JSX element at the end of the last line
+jsxBracketSameLine: false
+```
+
+
+## Visual Studio Code
+
+For using the configuration inside Visual Studio Code it is recommended to enable
+the prettier plugin together with ESLint. This results into Prettier formatting the code
+and ESLint fixing minor oddities as configured in this project.
+
+```json
+"prettier.eslintIntegration": true,
+```
+
+
+## Zero-Config Environments
+
+This configuration is smarter than most others in the realization that it
+comes with pre-configured overrides for specific file and folder name patterns.
+
+Overrides:
+
+- Supports NodeJS APIs and CommonJS for all top-level JavaScript files as these are typically trivial config files which are used without transpilation.
+- Supports Jest tests and environment inside of all `*.test.js`, `*.spec.js` and inside a `__tests__` folder.
+- Supports client side code (browser environment) inside the folders `client`, `browser` or `web`.
+- Supports server side code (NodeJS environment) inside the folders `server`, `node` or `cli`.
+
+This automatic environment tweaking is especially useful for universal application code like when using server side rendering with front-end libraries like ReactJS.
+
+### Explicit NodeJS Config
 
 There is an extended NodeJS focused configuration. Simply change your configuration to:
 
@@ -87,10 +139,19 @@ extends:
 
 to enable this configuration with additional checks for security issues and deprecated features.
 
+### Explicit Browser Config
+
+There is an extended Browser focused configuration. Simply change your configuration to:
+
+```yaml
+extends:
+  - readable/browser
+```
+
+This allows usage of typical global browser objects.
 
 
-
-## Activated Plugins
+## Bundled Plugins
 
 - `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
