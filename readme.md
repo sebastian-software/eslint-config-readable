@@ -103,6 +103,8 @@ bracketSpacing: true
 jsxBracketSameLine: false
 ```
 
+Put this into your `.prettierrc.yml` into the root folder of your project.
+
 
 ## Visual Studio Code
 
