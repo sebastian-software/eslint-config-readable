@@ -72,6 +72,7 @@ rules:
     - 4
 ```
 
+> "There is basically no level of configurability that makes everyone happy." — Nicholas C. Zakas
 
 
 ## Matching Prettier Config
