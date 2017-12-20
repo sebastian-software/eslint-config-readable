@@ -128,6 +128,7 @@ Overrides:
 
 This automatic environment tweaking is especially useful for universal application code like when using server side rendering with front-end libraries like ReactJS.
 
+
 ### Explicit NodeJS Config
 
 There is an extended NodeJS focused configuration. Simply change your configuration to:
@@ -164,7 +165,7 @@ This allows usage of typical global browser objects.
 - `promise`: Checks for correctly working with Promises.
 - `react`: React specific checks for requiring specific structures of classes + preferring functional patterns.
 - `security`: Checks for security issues in e.g. RegExps.
-
+- `tree-shaking`: Marks all side-effects in module initialization that will interfere with tree-shaking
 
 
 ## Copyright

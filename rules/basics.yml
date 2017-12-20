@@ -25,6 +25,7 @@ env:
 plugins:
   - babel
   - no-use-extend-native
+  - tree-shaking
 
 globals:
   # Allow access to process.env also in Non-Node environments. We want to
@@ -77,3 +78,7 @@ rules:
   babel/new-cap:
     - error
     - capIsNew: false
+
+  # Marks all side-effects in module initialization that will interfere with tree-shaking (in RollupJS)
+  tree-shaking/no-side-effects-in-initialization:
+    - error

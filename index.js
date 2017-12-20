@@ -1,4 +1,4 @@
-/* eslint-disable import/no-commonjs */
+/* eslint-disable import/no-commonjs, tree-shaking/no-side-effects-in-initialization */
 module.exports = {
   extends: [
     "./rules/basics.yml",
@@ -30,7 +30,10 @@ module.exports = {
       },
       "rules": {
         // Allow commonjs in these typically non-transpiled files
-        "import/no-commonjs": "off"
+        "import/no-commonjs": "off",
+
+        // CommonJS code also does not work together with typical tree-shaking
+        "tree-shaking/no-side-effects-in-initialization": "off"
       }
     },
     {
