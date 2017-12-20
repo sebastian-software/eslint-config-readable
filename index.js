@@ -23,8 +23,11 @@ module.exports = {
         ".*.js",
 
         // Cosmiconfig files
-        "*.config.*.js"
+        "**/*.config.*.js"
       ],
+      "env": {
+        node: true
+      },
       "rules": {
         "import/no-commonjs": "off"
       }
@@ -35,8 +38,8 @@ module.exports = {
         "**/__tests__/*.js",
 
         // Alternative using a naming convention
-        "*.spec.js",
-        "*.test.js"
+        "**/*.spec.js",
+        "**/*.test.js"
       ],
       "env": {
         jest: true,
