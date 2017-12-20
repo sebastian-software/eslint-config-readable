@@ -51,7 +51,7 @@ rules:
 
   # Enforce a maximum line length
   max-len:
-    - error
+    - warn
     - code: 110
       comments: 140
       ignoreUrls: true
