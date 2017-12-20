@@ -5,10 +5,6 @@
 plugins:
   - import
 
-extends:
-  - plugin:import/errors
-  - plugin:import/warnings
-
 settings:
   import/resolver:
     babel-module: {}
@@ -21,15 +17,25 @@ settings:
     - .tsx
 
 rules:
+  # Errors as recommended
+  import/no-unresolved: error
+  import/named: error
+  import/namespace: error
+  import/default: error
+  import/export: error
+
+  # Warnings as recommended
+  import/no-named-as-default: warn
+  import/no-named-as-default-member: warn
+  import/no-duplicates: warn
+  # import/unambiguous: warn
+
   # Loader syntax is useful when loading files with alternative approaches e.g.
   # to detect images sizes, generating API docs, etc. but breaks other tools like Rollup.
   import/no-webpack-loader-syntax: error
 
   # Forbid import of modules using absolute paths
   import/no-absolute-path: error
-
-  # Report namespace imports which are typically too much of what you need.
-  import/no-namespace: error
 
   # Report CommonJS require calls and module.exports or exports.*
   # We go full-in with ES module syntax

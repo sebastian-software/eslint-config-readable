@@ -33,6 +33,12 @@ rules:
     - error
     - smart
 
+  # It's very rare that a user will create a getter with no return
+  # value; such a case is likely the result of unfinished or leftover code.
+  # If the user wants to define a getter that always returns
+  # `undefined`, they can use `return undefined`.
+  getter-return: error
+
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in: off
 
@@ -146,8 +152,24 @@ rules:
   # If it helps for readability, that's fine. Too much structure is still being removed by compression.
   no-extra-parens: off
 
+  # This rule concerns whether empty block statements are allowed (only
+  # block statements, not function bodies). Usually, an empty block
+  # statement is the result of unused or leftover code, so flag it for the
+  # user. However, allow empty try/catch statements, because many
+  # users use those to ignore errors (and because we don't want to flag
+  # an empty catch in a try/catch/finally).
+  no-empty:
+    - error
+    - allowEmptyCatch: true
+
   # Disallow empty character classes in regular expressions
   no-empty-character-class: error
+
+  # Disallow empty functions
+  no-empty-function: error
+
+  # Disallow empty destructuring patterns
+  no-empty-pattern: error
 
   # Disallow reassigning exceptions in catch clauses
   no-ex-assign: error
@@ -160,12 +182,6 @@ rules:
 
   # Prefer what ever the developer thinks make code more readable/understandable
   no-else-return: off
-
-  # Disallow empty functions
-  no-empty-function: error
-
-  # Disallow empty destructuring patterns
-  no-empty-pattern: error
 
   # Disabled: Disallow Null Comparisons. Stupid check. See also rule `eqeqeq`
   no-eq-null: off

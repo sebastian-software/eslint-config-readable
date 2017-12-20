@@ -24,29 +24,22 @@ rules:
   # Quality
   #############################################################
 
-  # Disallow undeclared variables in JSX
-  react/jsx-no-undef: error
-
   # Prevent missing displayName in a React component definition
   react/display-name: error
 
-  # Enforce ES5 or ES6 class for returning value in render function
-  react/require-render-return: error
+  # Disallow undeclared variables in JSX
+  react/jsx-no-undef: error
 
-  # Prevent missing React when using JSX
-  react/react-in-jsx-scope: error
+  # Prevent duplicate props in JSX
+  react/jsx-no-duplicate-props:
+    - error
+    - ignoreCase: true
 
-  # Good idea but currently warns on too many false issues with HOCs
-  react/no-unused-prop-types: off
+  # Prevent missing parentheses around multilines JSX (fixable)
+  react/jsx-wrap-multilines: error
 
   # Prevent multiple component definition per file
   react/no-multi-comp: error
-
-  # Enforce ES5 or ES6 class for React Components
-  react/prefer-es6-class: error
-
-  # Enforce stateless React Components to be written as a pure function
-  react/prefer-stateless-function: warn
 
   # Prevent usage of dangerous JSX properties
   react/no-danger: error
@@ -54,19 +47,61 @@ rules:
   # Prevent direct mutation of this.state
   react/no-direct-mutation-state: error
 
-  # Enforce style prop value being an object
-  react/style-prop-object: error
+  # Implementing shouldComponentUpdate while extending from PureComponent
+  # is probably indicative of an unfinished refactor, since there's no point
+  # to extending from PureComponent when you're overriding its
+  # shouldComponentUpdate.
+  react/no-redundant-should-component-update: warn
 
-  # Prevent duplicate props in JSX
-  react/jsx-no-duplicate-props:
-    - error
-    - ignoreCase: true
+  # If the user gets the casing wrong on a class property or lifecycle
+  # method, it is probably a typo. Inform the user so that they can correct
+  # it, because the code will not work as intended with the wrong casing.
+  # Note that this rule will not be flagged on classes which don't extend
+  # a class named "Component" or "PureComponent". There is technically room
+  # for some false positives here (since you could have something else called
+  # Component or PureComponent in your codebase), but the chance of that
+  # collision occuring is pretty low in a React codebase.
+  react/no-typos: error
 
   # Don't pollute DOM
   react/no-unknown-property: error
 
-  # Prevent missing parentheses around multilines JSX (fixable)
-  react/jsx-wrap-multilines: error
+  # Unused prop types usually indicate that the user has some unused code,
+  # or hasn't written some code yet, or isn't done with a refactor. So
+  # flagging them is helpful.
+  react/no-unused-prop-types: warn
+
+  # If the user has defined a property in the state but is not using it, it
+  # is likely indicative of unused or leftover code, or an in-progress
+  # refactor. It might be a false negative if, for example, the user spreads
+  # all their state onto a child prop, but I think the benefit outweighs the
+  # drawback here, since that pattern is less common than state only being
+  # dereferenced by the component who owns that state. That said, when using
+  # the "spread state" pattern, the only way to get eslint to stop yelling at
+  # you is to dereference all state directly or use an eslint-disable
+  # comment. So I might change my mind about this one.
+  react/no-unused-state: warn
+
+  # Enforce ES5 or ES6 class for React Components
+  react/prefer-es6-class: error
+
+  # Enforce stateless React Components to be written as a pure function
+  react/prefer-stateless-function: warn
+
+  # Enforce ES5 or ES6 class for returning value in render function
+  react/require-render-return: error
+
+  # Prevent missing React when using JSX
+  react/react-in-jsx-scope: error
+
+  # Enforce style prop value being an object
+  react/style-prop-object: error
+
+  # React will print an error if you try to give children to an img, br, or
+  # hr. This is almost always a mistake.
+  react/void-dom-elements-no-children: warn
+
+
 
   #############################################################
   # Performance

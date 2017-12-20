@@ -47,6 +47,10 @@ rules:
   # Trailing newlines in non-empty files are a common UNIX idiom.
   eol-last: error
 
+  # If you use the wrong greater than / less than sign in a for loop, it will
+  # create an infinite loop condition. This is almost always unintentional.
+  for-direction: error
+
   # Enforce strict mode globally which also happens during bundling
   strict:
     - error
