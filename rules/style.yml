@@ -5,12 +5,12 @@
 rules:
   # Enforce spaces inside of brackets
   array-bracket-spacing:
-    - error
+    - warn
     - always
     - objectsInArrays: false
 
   spaced-comment:
-    - error
+    - warn
     - always
     - exceptions: [ "*", "=", "-" ]
 
@@ -22,7 +22,7 @@ rules:
     - as-needed
 
   arrow-parens:
-    - error
+    - warn
     - always
 
   # Tolerating both: 1tbs and allman - it's not really that relevant as long
@@ -33,12 +33,12 @@ rules:
   # Reduce visual clutter though non required commas.
   # Code is more often read than written. Optimize for that.
   comma-dangle:
-    - error
+    - warn
     - never
 
   # Requires a comma after and on the same line as an array element
   comma-style:
-    - error
+    - warn
     - last
 
   # Require Following Curly Brace Conventions
@@ -46,17 +46,17 @@ rules:
     - off
 
   # Require Camelcase
-  camelcase: error
+  camelcase: warn
 
   # It is desirable to ensure that whichever alias the team agrees upon is used
   # consistently throughout the application.
   consistent-this:
-    - error
+    - warn
     - self
 
   # Useful for debugging in older browsers, but a lot of work to manually add everywhere
   func-names:
-    - error
+    - warn
     - as-needed
 
   # We do not allow too many params, therefor we also do not need multilines.
@@ -68,13 +68,13 @@ rules:
 
   # Enforce the consistent use of function declarations
   func-style:
-    - error
+    - warn
     - declaration
     - allowArrowFunctions: true
 
   # Enforce minimum and maximum identifier lengths
   id-length:
-    - error
+    - warn
     - min: 4
       max: 40
       # 'i' + 'l' = typical looping constructs
@@ -91,7 +91,7 @@ rules:
 
   # Use two spaces for indention
   indent:
-    - error
+    - warn
     - 2
     - SwitchCase: 1
       VariableDeclarator: 1
@@ -105,17 +105,17 @@ rules:
 
   # Same indent in JSX
   react/jsx-indent:
-    - error
+    - warn
     - 2
 
   # Validate props indentation in JSX
   react/jsx-indent-props:
-    - error
+    - warn
     - 2
 
   # Enforce empty line between all class members
   lines-between-class-members:
-    - error
+    - warn
     - always
     - exceptAfterSingleLine: true
 
@@ -130,7 +130,7 @@ rules:
 
   # Visual more verbose formatting is good for readability
   newline-per-chained-call:
-    - error
+    - warn
     - ignoreChainWithDepth: 2
 
   # Disallow inline comments after code
@@ -149,13 +149,13 @@ rules:
 
   # Enforce consistent spacing inside braces
   object-curly-spacing:
-    - error
+    - warn
     - always
 
   # Enforce placing object properties on separate lines. Generally a good idea on a lot of cases.
   # Unfortunately does not make code with (destructured) named parameters very readable.
   object-property-newline:
-    - error
+    - warn
     - allowMultiplePropertiesPerLine: true
 
   # Require Object Literal Shorthand Syntax
@@ -167,37 +167,37 @@ rules:
 
   # Enforce variables to be declared separately in functions
   one-var:
-    - error
+    - warn
     - initialized: never
 
   # Disallow newlines around variable declarations
   one-var-declaration-per-line:
-    - error
+    - warn
     - initializations
 
   # Disallow assignment operator shorthand where possible
-  operator-assignment: error
+  operator-assignment: warn
 
   # Enforce consistent linebreak style for operators. Place the operator at the end of the line.
   operator-linebreak:
-    - error
+    - warn
     - after
 
   # Disallow padding within blocks.
   # If you need this probably think of using Allman style (which is allowed) where more overview is needed.
   padded-blocks:
-    - error
+    - warn
     - never
 
   # Disable semicolons
   semi:
-    - error
+    - warn
     - never
 
   # Disallow a space before function parenthesis
   # Parens belong to the function... a spacing could break easy grasping of the code
   space-before-function-paren:
-    - error
+    - warn
     - never
 
   # Variables and Imports should be sorted in semantic groups not by name
@@ -211,20 +211,20 @@ rules:
 
   # Enforce PascalCase for user-defined JSX components
   react/jsx-pascal-case:
-    - error
+    - warn
     - allowAllCaps: true
       ignore: []
 
   # Restrict file extensions that may contain JSX
   react/jsx-filename-extension:
-    - error
-    - extensions: [ ".js", ".ts" ]
+    - warn
+    - extensions: [ ".js" ]
 
   # Prevent extra closing tags for components without children (fixable)
-  react/self-closing-comp: error
+  react/self-closing-comp: warn
 
   # Enforce component methods order
-  react/sort-comp: error
+  react/sort-comp: warn
 
   # Enforce event handler naming conventions in JSX
   # Disabled feels too strict.
@@ -232,8 +232,8 @@ rules:
 
   # Validate closing bracket location in JSX (fixable)
   react/jsx-closing-bracket-location:
-    - error
+    - warn
     - line-aligned
 
   # Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
-  react/jsx-curly-spacing: error
+  react/jsx-curly-spacing: warn
