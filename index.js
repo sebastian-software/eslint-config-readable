@@ -48,6 +48,10 @@ module.exports = {
       "env": {
         jest: true,
         mocha: true
+      },
+      "rules": {
+        // When using global APIs like in Jest tree shaking does not work (and is not important).
+        "tree-shaking/no-side-effects-in-initialization": "off"
       }
     },
     {
