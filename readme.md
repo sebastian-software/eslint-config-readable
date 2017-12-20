@@ -37,6 +37,13 @@ There is also the matching [Stylelint Configuration](https://www.npmjs.com/packa
 - No magic numbers. Use variables to describe intention.
 
 
+## Matching Prettier Config
+
+As this configuration contains a few formatting rules these are the prettier settings you might want to use in combination with this:
+
+
+
+
 ## Usage
 
 Installation with `npm`:

@@ -2,9 +2,6 @@
 # Code Quality
 #######################################################################################
 
-plugins:
-  - extra-rules
-
 rules:
   # Enforces return statements in callbacks of array’s methods like `filter`
   array-callback-return: error
@@ -35,11 +32,6 @@ rules:
   eqeqeq:
     - error
     - smart
-
-  # Warn on any outcommented code. Typically this is temporarly and should
-  # be cleaned up over time.
-  # https://github.com/bahmutov/eslint-rules
-  extra-rules/no-commented-out-code: warn
 
   # Was mainly relevant while people extended Object.prototype.xxx
   guard-for-in: off
