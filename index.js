@@ -29,21 +29,46 @@ module.exports = {
         node: true
       },
       "rules": {
+        // Allow commonjs in these typically non-transpiled files
         "import/no-commonjs": "off"
       }
     },
     {
       "files": [
-        // Jest Tests
+        // Typical approach for central test files
         "**/__tests__/*.js",
 
-        // Alternative using a naming convention
+        // Typical approach for co-located test files
         "**/*.spec.js",
         "**/*.test.js"
       ],
       "env": {
         jest: true,
         mocha: true
+      }
+    },
+    {
+      "files": [
+        // Auto enable node environment for files inside "client", "browser" or "web" folders.
+        "**/client/**/*.js",
+        "**/browser/**/*.js",
+        "**/web/**/*.js"
+      ],
+      "env": {
+        browser: true,
+        node: false
+      }
+    },
+    {
+      "files": [
+        // Auto enable node environment for files inside "server", "node" or "cli" folders.
+        "**/server/**/*.js",
+        "**/node/**/*.js",
+        "**/cli/**/*.js"
+      ],
+      "env": {
+        node: true,
+        browser: false
       }
     }
   ]
