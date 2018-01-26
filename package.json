@@ -31,10 +31,10 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-babel-module": "^4.0.0",
     "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-compat": "^2.1.0",
+    "eslint-plugin-compat": "^2.2.0",
     "eslint-plugin-css-modules": "^2.7.5",
     "eslint-plugin-filenames": "^1.2.0",
-    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-flowtype": "^2.42.0",
     "eslint-plugin-flowtype-errors": "^3.3.7",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsdoc": "^3.3.1",
@@ -42,12 +42,12 @@
     "eslint-plugin-no-use-extend-native": "^0.3.12",
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react": "^7.6.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-tree-shaking": "^1.7.0",
-    "flow-bin": "^0.63.1"
+    "flow-bin": "^0.64.0"
   },
   "devDependencies": {
-    "release-it": "^6.1.0"
+    "release-it": "^6.1.1"
   }
 }
