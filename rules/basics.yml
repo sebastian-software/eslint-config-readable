@@ -28,6 +28,7 @@ plugins:
   - tree-shaking
   - optimize-regex
   - immutable
+  - jest
 
 globals:
   # Allow access to process.env also in Non-Node environments. We want to
