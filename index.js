@@ -18,7 +18,8 @@ module.exports = {
     "./rules/style.yml"
   ],
 
-  overrides: [
+  overrides:
+  [
     {
       files: [
         // Dot files
@@ -41,6 +42,8 @@ module.exports = {
         "tree-shaking/no-side-effects-in-initialization": "off"
       }
     },
+
+    // Automatically tweak for test related files
     {
       files: [
         // Typical approach for central test files
@@ -52,9 +55,20 @@ module.exports = {
       ],
       env: {
         jest: true,
-        mocha: true
+        "jest/globals": true
       },
       rules: {
+        "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
+        "jest/no-identical-title": "error",
+        "jest/prefer-to-have-length": "warn",
+        "jest/valid-expect": "error",
+        "jest/prefer-to-be-null": "warn",
+        "jest/prefer-to-be-undefined": "warn",
+        "jest/no-large-snapshots": [
+          "warn", { maxSize: 50 }
+        ],
+
         // When using global APIs like in Jest tree shaking does not work (and is not important).
         "tree-shaking/no-side-effects-in-initialization": "off",
 
