@@ -1,4 +1,6 @@
-/* eslint-disable import/no-commonjs, tree-shaking/no-side-effects-in-initialization */
+/* eslint-disable import/no-commonjs */
+/* eslint-disable tree-shaking/no-side-effects-in-initialization */
+/* eslint-disable immutable/no-mutation */
 module.exports = {
   extends: [
     "./rules/basics.yml",
@@ -31,6 +33,9 @@ module.exports = {
       "rules": {
         // Allow commonjs in these typically non-transpiled files
         "import/no-commonjs": "off",
+
+        // Disabled as even CommonJS exports are one kind of mutation.
+        "immutable/no-mutation": "off",
 
         // CommonJS code also does not work together with typical tree-shaking
         "tree-shaking/no-side-effects-in-initialization": "off"
