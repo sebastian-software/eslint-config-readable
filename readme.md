@@ -1,4 +1,4 @@
-# ESLint Config Readable<br/>Zero Config Smart Config for Modern Development<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-img]][npm] [![Dependencies][deps-img]][deps]
+# *ESLint* Config Readable<br/>Zero Config Smart Config for Modern Development<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-img]][npm] [![Dependencies][deps-img]][deps]
 
 [sponsor-img]: https://img.shields.io/badge/Sponsored%20by-Sebastian%20Software-692446.svg
 [sponsor]: https://www.sebastian-software.de
@@ -11,7 +11,7 @@
 
 The aim of this configuration is to achieve optimal readable code for a large number of projects. In many cases, the easing of the code's looseness in comparison to its compactness is an advantage for this. The idea is that code is much more read than written. Clear and structured code is therefore valuable for each additional author.
 
-The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting (which could be fully solved with new tools like [Prettier](https://prettier.io/)) but also about avoiding errors and mentoring developers. As you will see the chosen infrastructure with ESLint as a backbone offers so much more.
+The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting (which could be fully solved with new tools like [Prettier](https://prettier.io/)) but also about avoiding errors and mentoring developers. As you will see the chosen infrastructure with *ESLint* as a backbone offers so much more.
 
 With support for React, Flowtype, JSX, JSDoc and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
 
@@ -111,11 +111,28 @@ also copy the file out of this project. Unfortunately *prettier* does not yet
 support extending centrally hosted config files.
 
 
+## Useful Scripts
+
+It is recommended to extend the `script` section of your `package.json` by these entries:
+
+```json
+  "scripts": {
+    "lint:js": "eslint .",
+    "fix:js": "eslint --fix .",
+    "format:js": "prettier --write 'src/**/*.{js,mjs}' '*.{js,mjs}' && npm run fix:js"
+    ...
+  }
+```
+
+Note: If your project is just JavaScript then you could for sure keep out the type specifier `:js` on the task names.
+
+
+
 ## Visual Studio Code
 
 For using the configuration inside Visual Studio Code it is recommended to enable
-the prettier plugin together with ESLint. This results into Prettier formatting the code
-and ESLint fixing minor oddities as configured in this project.
+the *Prettier* plugin together with *ESLint*. This results into Prettier formatting the code
+and *ESLint* fixing minor oddities as configured in this project.
 
 ```json
 "prettier.eslintIntegration": true,
