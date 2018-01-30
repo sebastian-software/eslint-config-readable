@@ -93,7 +93,7 @@ singleQuote: false
 # Don't use semicolons where they are not required
 semi: false
 
-# Don't do stupid trailing commas reducing noise ratio.
+# Don't do noisy trailing commas
 trailingComma: none
 
 # More space is better for readability
@@ -101,9 +101,14 @@ bracketSpacing: true
 
 # Put the > of a multi-line JSX element at the end of the last line
 jsxBracketSameLine: false
+
+# Include parentheses around a sole arrow function parameter.
+arrowParens: always
 ```
 
-Put this into your `.prettierrc.yml` into the root folder of your project.
+Put this into your `.prettierrc.yml` into the root folder of your project. You can
+also copy the file out of this project. Unfortunately *prettier* does not yet
+support extending centrally hosted config files.
 
 
 ## Visual Studio Code
