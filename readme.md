@@ -186,6 +186,7 @@ This allows usage of typical global browser objects.
 - `getsentry`: Checks for JSX to use internalization methods instead of hard-coded strings.
 - `immutable`: Prevents accidential object mutation.
 - `import`: Checks whether imports map to valid entry points.
+- `jest`: Offering additional support for Jest-specific hints.
 - `jsdoc`: Verifies a few key aspects of JSdoc documentation.
 - `jsx-a11y`: Accessibility checks for JSX tags e.g. requiring `alt` tags on images.
 - `no-use-extend-native`: Prevent extending native objects/classes like `Array` or `String`.
