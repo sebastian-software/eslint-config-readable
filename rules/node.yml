@@ -6,9 +6,6 @@ extends:
   - plugin:node/recommended
   - plugin:security/recommended
 
-env:
-  node: true
-
 rules:
   # Typically we use Babel/Buble in most projects right now
   node/no-unsupported-features: off
