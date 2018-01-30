@@ -27,6 +27,7 @@ plugins:
   - no-use-extend-native
   - tree-shaking
   - optimize-regex
+  - immutable
 
 globals:
   # Allow access to process.env also in Non-Node environments. We want to
@@ -90,4 +91,8 @@ rules:
 
   # Warn on overly complex regexps
   optimize-regex/optimize-regex:
+    - warn
+
+  # Warn on most often unintentional modification of existing objects
+  immutable/no-mutation:
     - warn

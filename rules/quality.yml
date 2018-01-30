@@ -483,6 +483,14 @@ rules:
   # current scope, making it impossible to tell what a variable inside the block actually refers to.
   no-with: error
 
+  # You have to choose between either 'let' or 'const'
+  no-var: error
+
+  # While at it, we prefer 'const' where we detect that a variable is not modified.
+  prefer-const:
+    - error
+    - ignoreReadBeforeAssign: true
+
   # Mainly for securing code compatibility
   radix:
     - error
