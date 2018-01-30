@@ -3,7 +3,11 @@
 /* eslint-disable immutable/no-mutation */
 module.exports = {
   extends: [
-    "./index",
+    "./index.js",
     "./rules/node.yml"
-  ]
+  ],
+  env: {
+    browser: true,
+    node: false
+  }
 }
