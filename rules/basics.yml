@@ -85,9 +85,9 @@ rules:
     - error
     - capIsNew: false
 
-  # Marks all side-effects in module initialization that will interfere with tree-shaking (in RollupJS)
+  # Marks all side-effects in module initialization that will interfere with tree-shaking (e.g. in RollupJS)
   tree-shaking/no-side-effects-in-initialization:
-    - error
+    - warn
 
   # Warn on overly complex regexps
   optimize-regex/optimize-regex:
