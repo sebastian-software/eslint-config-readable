@@ -15,9 +15,9 @@ rules:
   # Enforces the use of catch on un-returned promises.
   promise/catch-or-return: warn
 
-  # Await is part of ES2017... transpiling to generators is still not as efficient as needed.
+  # Await is part of ES2017. Ideally it's transpiled to Promises with nodeent.
   # It's okay to keep using Promises, but it's also okay to start using async/await.
-  promise/prefer-await-to-then: off
+  promise/prefer-await-to-then: warn
 
   # Disabled as we assume it being polyfilled for us
   promise/no-native: off

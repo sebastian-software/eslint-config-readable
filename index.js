@@ -51,7 +51,11 @@ module.exports = {
       },
       "rules": {
         // When using global APIs like in Jest tree shaking does not work (and is not important).
-        "tree-shaking/no-side-effects-in-initialization": "off"
+        "tree-shaking/no-side-effects-in-initialization": "off",
+
+        // The otherwise useful concept to let all then-blocks return something
+        // is often not required in tests where this mainly functions as an async helper.
+        "promise/always-return": "off"
       }
     },
     {
