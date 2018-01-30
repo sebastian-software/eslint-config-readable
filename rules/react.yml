@@ -4,6 +4,7 @@
 
 plugins:
   - react
+  - getsentry
 
 extends:
   - plugin:react/recommended
@@ -100,6 +101,9 @@ rules:
   # React will print an error if you try to give children to an img, br, or
   # hr. This is almost always a mistake.
   react/void-dom-elements-no-children: warn
+
+  # Make sure to wrap locale texts into i18n helpers
+  getsentry/jsx-needs-i18n: warn
 
 
 

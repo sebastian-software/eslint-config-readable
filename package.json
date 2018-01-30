@@ -36,6 +36,7 @@
     "eslint-plugin-filenames": "^1.2.0",
     "eslint-plugin-flowtype": "^2.42.0",
     "eslint-plugin-flowtype-errors": "^3.3.7",
+    "eslint-plugin-getsentry": "^2.0.0",
     "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsdoc": "^3.3.1",
