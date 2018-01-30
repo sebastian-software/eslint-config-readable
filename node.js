@@ -7,7 +7,7 @@ module.exports = {
     "./rules/node.yml"
   ],
   env: {
-    browser: true,
-    node: false
+    browser: false,
+    node: true
   }
 }
