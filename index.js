@@ -18,19 +18,19 @@ module.exports = {
     "./rules/style.yml"
   ],
 
-  "overrides": [
+  overrides: [
     {
-      "files": [
+      files: [
         // Dot files
         ".*.js",
 
         // Cosmiconfig files
         "**/*.config.*.js"
       ],
-      "env": {
+      env: {
         node: true
       },
-      "rules": {
+      rules: {
         // Allow commonjs in these typically non-transpiled files
         "import/no-commonjs": "off",
 
@@ -42,7 +42,7 @@ module.exports = {
       }
     },
     {
-      "files": [
+      files: [
         // Typical approach for central test files
         "**/__tests__/*.js",
 
@@ -50,11 +50,11 @@ module.exports = {
         "**/*.spec.js",
         "**/*.test.js"
       ],
-      "env": {
+      env: {
         jest: true,
         mocha: true
       },
-      "rules": {
+      rules: {
         // When using global APIs like in Jest tree shaking does not work (and is not important).
         "tree-shaking/no-side-effects-in-initialization": "off",
 
@@ -63,26 +63,28 @@ module.exports = {
         "promise/always-return": "off"
       }
     },
+
+    // Auto enable node environment for files inside "client", "browser" or "web" folders.
     {
-      "files": [
-        // Auto enable node environment for files inside "client", "browser" or "web" folders.
+      files: [
         "**/client/**/*.js",
         "**/browser/**/*.js",
         "**/web/**/*.js"
       ],
-      "env": {
+      env: {
         browser: true,
         node: false
       }
     },
+
+    // Auto enable node environment for files inside "server", "node" or "cli" folders.
     {
-      "files": [
-        // Auto enable node environment for files inside "server", "node" or "cli" folders.
+      files: [
         "**/server/**/*.js",
         "**/node/**/*.js",
         "**/cli/**/*.js"
       ],
-      "env": {
+      env: {
         node: true,
         browser: false
       }
