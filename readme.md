@@ -157,14 +157,19 @@ This allows usage of typical global browser objects.
 
 ## Bundled Plugins
 
+- `compat`: Lint the browser compatibility of your code
 - `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
 - `flowtype`: Support for checking FlowType syntax to match rules.
 - `flowtype-errors`: Helps writing correct FlowType declarations.
+- `getsentry`: Checks for JSX to use internalization methods instead of hard-coded strings.
+- `immutable`: Prevents accidential object mutation.
 - `import`: Checks whether imports map to valid entry points.
+- `jsdoc`: Verifies a few key aspects of JSdoc documentation.
 - `jsx-a11y`: Accessibility checks for JSX tags e.g. requiring `alt` tags on images.
 - `no-use-extend-native`: Prevent extending native objects/classes like `Array` or `String`.
 - `node`: Prevents usage of deprecated features and other checks when developing NodeJS based apps.
+- `optimize-regex`: Gives hints on overly complex regular expressions.
 - `promise`: Checks for correctly working with Promises.
 - `react`: React specific checks for requiring specific structures of classes + preferring functional patterns.
 - `security`: Checks for security issues in e.g. RegExps.
