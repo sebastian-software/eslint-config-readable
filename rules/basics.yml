@@ -26,6 +26,7 @@ plugins:
   - babel
   - no-use-extend-native
   - tree-shaking
+  - optimize-regex
 
 globals:
   # Allow access to process.env also in Non-Node environments. We want to
@@ -86,3 +87,7 @@ rules:
   # Marks all side-effects in module initialization that will interfere with tree-shaking (in RollupJS)
   tree-shaking/no-side-effects-in-initialization:
     - error
+
+  # Warn on overly complex regexps
+  optimize-regex/optimize-regex:
+    - warn
