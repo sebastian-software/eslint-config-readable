@@ -116,12 +116,11 @@ support extending centrally hosted config files.
 It is recommended to extend the `script` section of your `package.json` by these entries:
 
 ```json
-  "scripts": {
-    "lint:js": "eslint .",
-    "fix:js": "eslint --fix .",
-    "format:js": "prettier --write 'src/**/*.{js,mjs}' '*.{js,mjs}' && npm run fix:js"
-    ...
-  }
+"scripts": {
+  "lint:js": "eslint .",
+  "fix:js": "eslint --fix .",
+  "format:js": "prettier --write 'src/**/*.{js,mjs}' '*.{js,mjs}' && npm run fix:js"
+}
 ```
 
 Note: If your project is just JavaScript then you could for sure keep out the type specifier `:js` on the task names.
