@@ -85,7 +85,7 @@ rules:
         "key", "val", "obj",
         "pos", "row", "col",
         "min", "max",
-        "CWD", "pkg"
+        "CWD", "pkg", "css"
       ]
       properties: never
 
