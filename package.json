@@ -25,7 +25,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
   "dependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^7.2.3",
     "babel-plugin-module-resolver": "^3.0.0",
     "eslint": "^4.16.0",
     "eslint-config-prettier": "^2.9.0",
