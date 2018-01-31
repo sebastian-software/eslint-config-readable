@@ -80,9 +80,9 @@ rules:
 As this configuration contains a few formatting rules these are the prettier settings you might want to use in combination with this:
 
 ```yaml
-# We generally allow wider code lines, but for auto formatting this
-# is quite a good rule to produce readable code.
-printWidth: 80
+# Generally, we allow slightly longer lines (110 for code, 140 for comments),
+# but we limit this to a value that leads to better results when using auto formatting.
+printWidth: 90
 
 # Use two spaces for tabs
 tabWidth: 2
