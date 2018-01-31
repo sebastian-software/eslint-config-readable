@@ -5,7 +5,7 @@
 extends:
   - eslint:recommended
 
-# That's required for async/await, class properties and
+# That's required for async/await, class properties, Flow types and
 # other still quite new language features.
 parser: babel-eslint
 
