@@ -27,7 +27,6 @@ env:
 plugins:
   - babel
   - no-use-extend-native
-  - tree-shaking
   - optimize-regex
   - immutable
   - jest
@@ -87,10 +86,6 @@ rules:
   babel/new-cap:
     - error
     - capIsNew: false
-
-  # Marks all side-effects in module initialization that will interfere with tree-shaking (e.g. in RollupJS)
-  tree-shaking/no-side-effects-in-initialization:
-    - warn
 
   # Warn on overly complex regexps
   optimize-regex/optimize-regex:

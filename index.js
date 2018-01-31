@@ -1,5 +1,4 @@
 /* eslint-disable import/no-commonjs */
-/* eslint-disable tree-shaking/no-side-effects-in-initialization */
 /* eslint-disable immutable/no-mutation */
 module.exports = {
   extends: [
@@ -36,10 +35,7 @@ module.exports = {
         "import/no-commonjs": "off",
 
         // Disabled as even CommonJS exports are one kind of mutation.
-        "immutable/no-mutation": "off",
-
-        // CommonJS code also does not work together with typical tree-shaking
-        "tree-shaking/no-side-effects-in-initialization": "off"
+        "immutable/no-mutation": "off"
       }
     },
 
@@ -68,9 +64,6 @@ module.exports = {
         "jest/no-large-snapshots": [
           "warn", { maxSize: 50 }
         ],
-
-        // When using global APIs like in Jest tree shaking does not work (and is not important).
-        "tree-shaking/no-side-effects-in-initialization": "off",
 
         // The otherwise useful concept to let all then-blocks return something
         // is often not required in tests where this mainly functions as an async helper.
