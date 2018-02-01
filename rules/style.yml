@@ -198,7 +198,9 @@ rules:
   # Parens belong to the function... a spacing could break easy grasping of the code
   space-before-function-paren:
     - warn
-    - never
+    - named: never
+      anonymous: never
+      asyncArrow: always
 
   # Variables and Imports should be sorted in semantic groups not by name
   sort-imports: off
