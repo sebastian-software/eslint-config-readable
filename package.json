@@ -26,9 +26,9 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
   "peerDependencies": {
-    "eslint": ">4",
-    "flow-bin": ">0.70",
-    "prettier": ">1.12"
+    "eslint": ">=4",
+    "flow-bin": ">=0.70",
+    "prettier": ">=1.12"
   },
   "dependencies": {
     "babel-eslint": "^8.2.3",
