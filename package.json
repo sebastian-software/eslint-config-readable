@@ -25,10 +25,14 @@
   ],
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
+  "peerDependencies": {
+    "eslint": ">4",
+    "flow-bin": ">0.70",
+    "prettier": ">1.12"
+  },
   "dependencies": {
     "babel-eslint": "^8.2.3",
     "babel-plugin-module-resolver": "^3.1.1",
-    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
     "eslint-plugin-babel": "^5.1.0",
@@ -48,9 +52,12 @@
     "eslint-plugin-optimize-regex": "^1.1.5",
     "eslint-plugin-promise": "^3.7.0",
     "eslint-plugin-react": "^7.7.0",
-    "eslint-plugin-security": "^1.4.0",
-    "flow-bin": "^0.70.0",
-    "prettier": "^1.12.1"
+    "eslint-plugin-security": "^1.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "eslint": "^4.19.1",
+    "flow-bin": "^0.71.0",
+    "prettier": "^1.12.1"
+  }
 }
