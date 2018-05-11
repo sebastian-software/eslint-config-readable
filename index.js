@@ -67,7 +67,10 @@ module.exports = {
 
         // The otherwise useful concept to let all then-blocks return something
         // is often not required in tests where this mainly functions as an async helper.
-        "promise/always-return": "off"
+        "promise/always-return": "off",
+
+        // File names in tests typically follow other conversations
+        "filenames/match-regex": "off"
       }
     },
 
