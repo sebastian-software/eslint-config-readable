@@ -70,7 +70,10 @@ module.exports = {
         "promise/always-return": "off",
 
         // File names in tests typically follow other conversations
-        "filenames/match-regex": "off"
+        "filenames/match-regex": "off",
+
+        // Using immutable structures is more relevant in real code than in tests.
+        "immutable/no-mutation": "off"
       }
     },
 
