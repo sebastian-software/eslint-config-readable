@@ -88,8 +88,10 @@ rules:
     - capIsNew: false
 
   # Warn on overly complex regexps
-  optimize-regex/optimize-regex:
-    - warn
+  # Update May 2018: Unfortunately has still a lot of outstanding issues where it makes code worse,
+  # not better, also not maintained for a while.
+  # optimize-regex/optimize-regex:
+  #   - warn
 
   # Warn on most often unintentional modification of existing objects
   immutable/no-mutation:
