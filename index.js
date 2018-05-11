@@ -43,7 +43,7 @@ module.exports = {
     {
       files: [
         // Typical approach for central test files
-        "**/__tests__/*.js",
+        "**/__tests__/**/*.js",
 
         // Typical approach for co-located test files
         "**/*.spec.js",
