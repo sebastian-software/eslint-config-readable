@@ -117,13 +117,11 @@ It is recommended to extend the `script` section of your `package.json` by these
 
 ```json
 "scripts": {
-  "lint:js": "eslint --ignore-path .gitignore .",
-  "fix:js": "eslint --ignore-path .gitignore --fix .",
-  "format:js": "prettier --ignore-path .gitignore --write '**/*.{js,mjs}' && npm run fix:js"
+  "lint:js": "eslint .",
+  "fix:js": "eslint --fix .",
+  "format:js": "prettier --write '**/*.{js,mjs}' && npm run fix:js"
 }
 ```
-
-We pass over the (typically) existing `.gitignore` file to *ESLint* as this is a very easy way to ignore generated files from ever being linted. Unfortunately we can't offer this behavior through configuration as [*ESLint* has no support for this](https://github.com/eslint/eslint/issues/3529).
 
 Note: If your project is just JavaScript then you could for sure keep out the type specifier `:js` on the task names.
 
