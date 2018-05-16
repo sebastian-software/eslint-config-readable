@@ -353,11 +353,13 @@ rules:
   no-regex-spaces: error
 
   # Disallow usage of `with`, `debugger` and `label` statements
+  # Prevent usage of generators as transpiling them is still super slow and complex.
   no-restricted-syntax:
     - error
     - WithStatement
     - DebuggerStatement
     - LabeledStatement
+    - YieldExpression
 
   # Disallow variable redeclaration
   # Disabled. Therefor they are variables, right?
