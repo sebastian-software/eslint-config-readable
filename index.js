@@ -1,5 +1,4 @@
 /* eslint-disable import/no-commonjs */
-/* eslint-disable immutable/no-mutation */
 module.exports = {
   extends: [
     "./rules/basics.yml",
@@ -32,10 +31,7 @@ module.exports = {
       },
       rules: {
         // Allow commonjs in these typically non-transpiled files
-        "import/no-commonjs": "off",
-
-        // Disabled as even CommonJS exports are one kind of mutation.
-        "immutable/no-mutation": "off"
+        "import/no-commonjs": "off"
       }
     },
 
@@ -70,10 +66,7 @@ module.exports = {
         "promise/always-return": "off",
 
         // File names in tests typically follow other conversations
-        "filenames/match-regex": "off",
-
-        // Using immutable structures is more relevant in real code than in tests.
-        "immutable/no-mutation": "off"
+        "filenames/match-regex": "off"
       }
     },
 
@@ -104,12 +97,7 @@ module.exports = {
       rules: {
         // This is super useful for browser development as it uses `browserslist`.
         // Unfortunately this does not offer any support for NodeJS.
-        "compat/compat": "off",
-
-        // Immutability is mainly interesting for client side
-        // state management like Redux. Not so much required
-        // when doing pure NodeJS libraries and cli tools.
-        "immutable/no-mutation": "off"
+        "compat/compat": "off"
       }
     }
   ]

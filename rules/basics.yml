@@ -27,8 +27,6 @@ env:
 plugins:
   - babel
   - no-use-extend-native
-  - optimize-regex
-  - immutable
   - jest
 
 globals:
@@ -86,13 +84,3 @@ rules:
   babel/new-cap:
     - error
     - capIsNew: false
-
-  # Warn on overly complex regexps
-  # Update May 2018: Unfortunately has still a lot of outstanding issues where it makes code worse,
-  # not better, also not maintained for a while.
-  # optimize-regex/optimize-regex:
-  #   - warn
-
-  # Warn on most often unintentional modification of existing objects
-  immutable/no-mutation:
-    - warn
