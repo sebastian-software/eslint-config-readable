@@ -17,6 +17,10 @@ parserOptions:
     jsx: true
   sourceType: module
 
+globals:
+  # Globally allow fetch
+  fetch: false
+
 env:
   browser: false
   node: false

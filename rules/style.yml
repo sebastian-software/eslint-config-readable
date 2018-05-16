@@ -82,10 +82,12 @@ rules:
       exceptions: [
         "i", "l",
         "id", "fs", "url", "uri", "map", "env", "err",
+        "req", "res",
         "key", "val", "obj",
         "pos", "row", "col",
         "min", "max",
-        "CWD", "pkg", "css", "app", "api", "App", "API"
+        "CWD", "pkg", "css",
+        "app", "api", "App", "API"
       ]
       properties: never
 
