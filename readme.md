@@ -119,7 +119,7 @@ It is recommended to extend the `script` section of your `package.json` by these
 "scripts": {
   "lint:js": "eslint .",
   "fix:js": "eslint --fix .",
-  "format:js": "prettier --write '**/*.{js,mjs}' && npm run fix:js"
+  "format:js": "prettier --write '**/*.js' && npm run fix:js"
 }
 ```
 
