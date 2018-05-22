@@ -95,9 +95,6 @@ rules:
   # Prevent missing React when using JSX
   react/react-in-jsx-scope: error
 
-  # Enforce style prop value being an object
-  react/style-prop-object: error
-
   # React will print an error if you try to give children to an img, br, or
   # hr. This is almost always a mistake.
   react/void-dom-elements-no-children: warn
