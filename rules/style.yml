@@ -82,7 +82,7 @@ rules:
       exceptions: [
         "i", "l",
         "id", "fs", "url", "uri", "map", "env", "err",
-        "req", "res", "now",
+        "req", "res", "now", "raw",
         "key", "val", "obj",
         "pos", "row", "col",
         "min", "max",

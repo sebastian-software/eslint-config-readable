@@ -29,9 +29,6 @@ plugins:
   - jest
 
 globals:
-  # Globally allow fetch
-  fetch: false
-
   # Allow access to process.env also in Non-Node environments. We want to
   # protect the user in frontend code to access other NodeJS objects - therefor
   # we do not enable Node-Env globally, but `process.env` should not throw with
