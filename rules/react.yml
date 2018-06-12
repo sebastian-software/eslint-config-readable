@@ -39,6 +39,9 @@ rules:
   # Prevent missing parentheses around multilines JSX (fixable)
   react/jsx-wrap-multilines: error
 
+  # Prevent too many spaces in props
+  react/jsx-props-no-multi-spaces: error
+
   # Prevent multiple component definition per file
   react/no-multi-comp: error
 
