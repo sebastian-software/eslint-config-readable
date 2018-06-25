@@ -35,6 +35,17 @@ module.exports = {
       }
     },
 
+    // Relax some settings for Storybook files
+    {
+      files: [
+        "**/*.story.js"
+      ],
+      rules: {
+        // Don't enforce usage of translation features inside Stories
+        "getsentry/jsx-needs-i18n": "off"
+      }
+    },
+
     // Automatically tweak for test related files
     {
       files: [
