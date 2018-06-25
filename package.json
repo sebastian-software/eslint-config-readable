@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-readable",
-  "version": "1.14.0",
+  "version": "2.0.0",
   "description": "Configuration for ESLint to achieve readable source code.",
   "main": "index.js",
   "scripts": {
