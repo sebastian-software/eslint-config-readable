@@ -135,10 +135,6 @@ rules:
     - warn
     - ignoreChainWithDepth: 2
 
-  # Disallow inline comments after code
-  # Leads to more challenging to scan code.
-  no-inline-comments: warn
-
   # Disallow multiple empty lines
   no-multiple-empty-lines:
     - warn
