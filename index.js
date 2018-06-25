@@ -57,8 +57,7 @@ module.exports = {
         "**/*.test.js"
       ],
       env: {
-        jest: true,
-        "jest/globals": true
+        jest: true
       },
       rules: {
         "jest/no-disabled-tests": "warn",
