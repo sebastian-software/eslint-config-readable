@@ -26,7 +26,9 @@ rules:
   jsx-a11y/img-redundant-alt: error
 
   # Enforce that <label> elements have the htmlFor prop.
-  jsx-a11y/label-has-for: error
+  jsx-a11y/label-has-for:
+    - error
+    - allowChildren: true
 
   # Enforce lang attribute has a valid value.
   jsx-a11y/lang: error
