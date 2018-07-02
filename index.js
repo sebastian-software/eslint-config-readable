@@ -1,12 +1,18 @@
+const appRoot = require("app-root-dir").get()
+const existsSync = require("fs").existsSync
+const join = require("path").join
+
+const hasGraphQL = existsSync(join(appRoot, ".graphqlconfig"))
+
 /* eslint-disable import/no-commonjs */
 module.exports = {
   extends: [
     "./rules/basics.yml",
-    "./rules/compat.yml",
     "./rules/cssmodules.yml",
     "./rules/docs.yml",
     "./rules/filenames.yml",
     "./rules/flowtype.yml",
+    hasGraphQL ? "./rules/graphql.yml" : null,
     "./rules/import.yml",
     "./rules/jsx-a11y.yml",
     "./rules/modern.yml",
@@ -14,7 +20,7 @@ module.exports = {
     "./rules/quality.yml",
     "./rules/react.yml",
     "./rules/style.yml"
-  ],
+  ].filter(Boolean),
 
   overrides:
   [
