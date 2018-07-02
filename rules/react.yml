@@ -50,6 +50,9 @@ rules:
   # Prevent direct mutation of this.state
   react/no-direct-mutation-state: error
 
+  # Prevent using this.state within a this.setState
+  react/no-access-state-in-setstate: error
+
   # Implementing shouldComponentUpdate while extending from PureComponent
   # is probably indicative of an unfinished refactor, since there's no point
   # to extending from PureComponent when you're overriding its
