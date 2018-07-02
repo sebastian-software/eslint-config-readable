@@ -183,7 +183,7 @@ This allows usage of typical global browser objects.
 - `filenames`: Validation for file names matching some common sense requirements.
 - `flowtype`: Support for checking FlowType syntax to match rules.
 - `flowtype-errors`: Helps writing correct FlowType declarations.
-- `getsentry`: Checks for JSX to use internalization methods instead of hard-coded strings.
+- `graphql`: Check your GraphQL query strings against a schema.
 - `import`: Checks whether imports map to valid entry points.
 - `jest`: Offering additional support for Jest-specific hints.
 - `jsdoc`: Verifies a few key aspects of JSdoc documentation.

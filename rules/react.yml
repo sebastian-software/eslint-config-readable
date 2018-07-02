@@ -4,7 +4,6 @@
 
 plugins:
   - react
-  - getsentry
 
 extends:
   - plugin:react/recommended
@@ -103,7 +102,7 @@ rules:
   react/void-dom-elements-no-children: warn
 
   # Make sure to wrap locale texts into i18n helpers
-  getsentry/jsx-needs-i18n: warn
+  react/jsx-no-literals: warn
 
 
 

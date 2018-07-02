@@ -42,7 +42,7 @@ module.exports = {
       ],
       rules: {
         // Don't enforce usage of translation features inside Stories
-        "getsentry/jsx-needs-i18n": "off"
+        "react/jsx-no-literals": "off"
       }
     },
 
