@@ -2,6 +2,12 @@
 # Basics
 #######################################################################################
 
+plugins:
+  - babel
+  - no-use-extend-native
+  - jest
+  - codebox
+
 extends:
   - eslint:recommended
 
@@ -22,11 +28,6 @@ env:
   shared-node-browser: true
   es6: true
   commonjs: true
-
-plugins:
-  - babel
-  - no-use-extend-native
-  - jest
 
 globals:
   # Allow access to process.env also in Non-Node environments. We want to
@@ -83,3 +84,25 @@ rules:
   babel/new-cap:
     - error
     - capIsNew: false
+
+  codebox/sort-imports:
+    - error
+    - ignoreCase: true
+      groups: [
+        builtin,  # builtin dependencies go first
+        external, # then external dependencies
+        [unknown, absolute], # An array inside array of groups means that these two groups share same priority for sorting
+        parent,   # then parent
+        sibling,  # ...ok, you got it
+        index
+      ]
+      importTypes: [
+        default, # Default imports are at top of each group
+        named,   # After that - named imports
+        all,     # Imports of the whole namespace
+        none     # Plain import
+      ]
+
+  codebox/sort-named-imports:
+    - error
+    - ignoreCase: true
