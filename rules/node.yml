@@ -22,4 +22,4 @@ rules:
   # "We know Object injection is pretty false positive prone and it would
   # be nice to move towards having better accuracy on there." - via:
   # https://github.com/nodesecurity/eslint-plugin-security/issues/21#issuecomment-326031625
-  detect-object-injection: off
+  security/detect-object-injection: off
