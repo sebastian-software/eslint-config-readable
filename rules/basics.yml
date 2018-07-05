@@ -86,7 +86,7 @@ rules:
     - capIsNew: false
 
   codebox/sort-imports:
-    - error
+    - warn
     - ignoreCase: true
       groups: [
         builtin,  # builtin dependencies go first
@@ -104,5 +104,5 @@ rules:
       ]
 
   codebox/sort-named-imports:
-    - error
+    - warn
     - ignoreCase: true
