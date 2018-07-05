@@ -16,3 +16,10 @@ rules:
   # Disallow import declarations for files that don't exist.
   # Somewhat a duplicate of "import" plugin
   node/no-missing-import: off
+
+  # Detects variable[key] as a left- or right-hand assignment operand.
+  # Not sure why this part of the recommended set in "security":
+  # "We know Object injection is pretty false positive prone and it would
+  # be nice to move towards having better accuracy on there." - via:
+  # https://github.com/nodesecurity/eslint-plugin-security/issues/21#issuecomment-326031625
+  detect-object-injection: off
