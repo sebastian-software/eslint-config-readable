@@ -26,8 +26,8 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/eslint-config-readable",
   "peerDependencies": {
-    "eslint": ">=5",
-    "flow-bin": ">=0.70",
+    "eslint": ">=5.5.0",
+    "flow-bin": ">=0.80",
     "prettier": ">=1.12",
     "graphql": ">=0.13"
   },
