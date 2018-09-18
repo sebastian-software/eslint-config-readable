@@ -198,6 +198,6 @@ This allows usage of typical global browser objects.
 
 ## Copyright
 
-<img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/3d93746f/sebastiansoftware-en.svg" alt="Sebastian Software GmbH Logo" width="250" height="200"/>
+<img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/73119be7/sebastiansoftware-en.svg?sanitize=true" alt="Sebastian Software GmbH Logo" width="250" height="200"/>
 
 Copyright 2015-2018<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
