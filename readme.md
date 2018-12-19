@@ -13,7 +13,7 @@ The aim of this configuration is to achieve optimal readable code for a large nu
 
 The code should appear uniform no matter how many authors are involved. But of course, it is not only about formatting (which could be fully solved with new tools like [Prettier](https://prettier.io/)) but also about avoiding errors and mentoring developers. As you will see the chosen infrastructure with *ESLint* as a backbone offers so much more.
 
-With support for React, Flowtype, JSX, JSDoc and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
+With support for React, JSX, JSDoc and the latest JavaScript features through the use of the Babel parser, this configuration is useful in a variety of projects.
 
 Special features include, for example, the built-in control of CSS modules, JSX-based accessibility checks and a usage of the Can-I-Use database to warn on non-widely supported browser features.
 
@@ -181,8 +181,6 @@ This allows usage of typical global browser objects.
 - `compat`: Lint the browser compatibility of your code
 - `css-modules`: Checks whether CSS classes which are accessed via CSS modules are defined.
 - `filenames`: Validation for file names matching some common sense requirements.
-- `flowtype`: Support for checking FlowType syntax to match rules.
-- `flowtype-errors`: Helps writing correct FlowType declarations.
 - `graphql`: Check your GraphQL query strings against a schema.
 - `import`: Checks whether imports map to valid entry points.
 - `jest`: Offering additional support for Jest-specific hints.

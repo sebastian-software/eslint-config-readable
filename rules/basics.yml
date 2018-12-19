@@ -11,7 +11,7 @@ plugins:
 extends:
   - eslint:recommended
 
-# That's required for async/await, class properties, Flow types and
+# That's required for async/await, class properties and
 # other still quite new language features.
 parser: babel-eslint
 

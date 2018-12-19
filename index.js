@@ -11,7 +11,6 @@ module.exports = {
     "./rules/cssmodules.yml",
     "./rules/docs.yml",
     "./rules/filenames.yml",
-    "./rules/flowtype.yml",
     hasGraphQL ? "./rules/graphql.yml" : null,
     "./rules/import.yml",
     "./rules/jsx-a11y.yml",

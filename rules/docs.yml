@@ -27,11 +27,11 @@ rules:
   # Requires that @param tag has description value.
   jsdoc/require-param-description: warn
 
-  # Requires that @param tag has type value. - Prefer Flowtype
+  # Requires that @param tag has type value. - Prefer Flowtype/TypeScript
   jsdoc/require-param-type: off
 
   # Requires that @returns tag has description value.
   jsdoc/require-returns-description: warn
 
-  # Requires that @returns tag has type value. - Prefer Flowtype
+  # Requires that @returns tag has type value. - Prefer Flowtype/TypeScript
   jsdoc/require-returns-type: off
