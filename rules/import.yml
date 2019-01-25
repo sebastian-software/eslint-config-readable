@@ -9,6 +9,11 @@ settings:
   import/resolver:
     babel-module: {}
 
+  import/ignore:
+    # Typescript Parser/Linter:
+    # Respecting this minor thing makes linting just very very slow.
+    - node_modules/typescript
+
   import/extensions:
     - .js
     - .jsx
